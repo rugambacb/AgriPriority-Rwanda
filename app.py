@@ -1,6 +1,5 @@
 import json
 import html
-import altair as alt
 import pandas as pd
 import streamlit as st
 import folium
@@ -393,24 +392,23 @@ with right:
 
 st.divider()
 st.subheader("National comparison · 30 districts")
-chart_data = pd.DataFrame({
-    "Recommendation": CATEGORIES,
-    "Districts": [int(df["priority_category"].eq(c).sum()) for c in CATEGORIES],
-})
-chart_data["color"] = chart_data["Recommendation"].map(PALETTE)
-chart = alt.Chart(chart_data).mark_bar(cornerRadiusEnd=5, size=26).encode(
-    x=alt.X("Districts:Q", title="Number of districts", axis=alt.Axis(tickMinStep=1)),
-    y=alt.Y("Recommendation:N", title=None, sort=CATEGORIES,
-            axis=alt.Axis(labelLimit=260, labelFontSize=12)),
-    color=alt.Color("Recommendation:N", legend=None,
-                    scale=alt.Scale(domain=CATEGORIES, range=[PALETTE[c] for c in CATEGORIES])),
-    tooltip=["Recommendation:N", "Districts:Q"],
-)
-labels = alt.Chart(chart_data).mark_text(align="left", dx=8, fontSize=13, fontWeight="bold").encode(
-    x="Districts:Q", y=alt.Y("Recommendation:N", sort=CATEGORIES), text="Districts:Q"
-)
-st.altair_chart((chart + labels).properties(height=230).configure_view(stroke=None),
-                use_container_width=True)
+# Stable, dependency-free comparison chart (works without Altair).
+chart_counts = df["priority_category"].value_counts().reindex(CATEGORIES, fill_value=0)
+max_count = max(int(chart_counts.max()), 1)
+for category in CATEGORIES:
+    count = int(chart_counts[category])
+    width = 100 * count / max_count
+    st.markdown(
+        '<div style="display:flex;align-items:center;gap:14px;margin:9px 0">'
+        f'<div style="width:235px;flex-shrink:0;font-size:0.88rem">{html.escape(category)}</div>'
+        '<div style="flex:1;background:#edf2f7;border-radius:8px;height:26px;overflow:hidden">'
+        f'<div style="background:{PALETTE[category]};height:100%;width:{width:.2f}%;'
+        'border-radius:8px"></div></div>'
+        f'<div style="width:35px;text-align:right;font-weight:700">{count}</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+st.caption("Number of districts in each provisional screening category.")
 view_fields = [
     "district", "priority_category",
     "mean_rainfall_anomaly_percent", "mean_cropland_ndvi_anomaly",

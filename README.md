@@ -1,18 +1,15 @@
-# AgriPriority Rwanda — Visual Release V3.4
-Preserves the working Version 3.3 GIS map, auto district zoom, map-click selection, NISR/MODIS/CHIRPS data, and nine-scenario screening.
+# AgriPriority Rwanda — V3.4.1 stability fix
 
-## What's new
-- Softer consistent recommendation palette (map, legend, recommendation card, chart).
-- Highlighted district recommendation banner.
-- Bordered KPI cards and clearer 2-column NISR/sensitivity panel.
-- Horizontal color-matched national comparison chart.
-- Human-readable table column labels. CSV export keeps original field names.
+Fixes the app-startup crash from Altair imports in the Python 3.14 Streamlit Cloud environment.
+The color-coded national comparison chart now uses dependency-free HTML bars.
+All map click/zoom interactions, 30-district geometry, NISR stats, metrics, legend, and recommendations remain unchanged.
 
-## Deploy
-Upload all five files to root of the existing GitHub repository, replacing matching filenames; commit. Existing Streamlit Cloud app auto redeploys with `app.py`. Do not upload the ZIP itself.
+## Deployment
+Extract this ZIP, upload all five files directly to the existing GitHub repository root and commit, replacing old versions. Streamlit Community Cloud will redeploy automatically. Entry file is `app.py`.
 
-## Validate
-Select Kayonza and inspect recommendation banner, metrics and chart. Click Kirehe and confirm map zoom/profile. Use Show all Rwanda, filters and CSV download. Check app logs if a dependency error appears.
-
-## Scientific notice
-These are preliminary screening categories, NOT validated crop-loss predictions. Rainfall and NDVI are indicators; thresholds are illustrative. Confirm boundary source and source-date provenance before official use.
+## Quick checks
+- App loads with no import traceback.
+- Select Kayonza: the "Why this district?" and KPI cards appear.
+- Chart shows 4 colored horizontal bars with counts 4, 4, 15, 7.
+- Click Kirehe on the map; district profile and zoom update.
+- "Show all Rwanda" returns to overview.
