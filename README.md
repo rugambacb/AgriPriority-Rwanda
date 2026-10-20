@@ -1,29 +1,26 @@
-# AgriPriority Rwanda — Streamlit Prototype
+# AgriPriority Rwanda — interactive district map V3
 
-An interactive dashboard for the NISR Big Data Hackathon 2026, using a 30-district agricultural screening dataset developed from NISR Season B 2025–2026 indicators, MODIS NDVI and CHIRPS rainfall anomalies.
+Streamlit dashboard with 30 districts, NISR Season B 2025–2026 indicators, MODIS NDVI, CHIRPS rainfall, and nine-scenario classification stability.
 
-## Run locally
+## Deployment (Streamlit Community Cloud)
+1. Upload **all five files** in this folder to the root of the public `AgriPriority-Rwanda` GitHub repository.
+2. Keep the branch `main` and the Streamlit entry point `app.py`.
+3. Streamlit Community Cloud will redeploy after you commit.
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+## Main improvements
+- Automatically fits the Rwanda boundaries on the interactive map.
+- Clicking a district polygon updates the sidebar selection and profile.
+- Selected district has a thick black outline.
+- Checkbox category filters replace multiselect tags.
+- Inline category legend under the map.
+- OpenStreetMap tiles (no CARTO key required).
 
-## Deploy to Streamlit Community Cloud
+## Validation checklist
+- Open the app and click Kirehe; sidebar and district profile should show Kirehe.
+- Pick Bugesera from sidebar; its map polygon should have a thick outline.
+- Disable a category; its polygons should become grey.
+- Verify the whole country fits in the map.
+- Confirm all 30 rows appear if all filters are enabled.
 
-1. Create a public GitHub repository.
-2. Upload `app.py`, `requirements.txt`, and `AgriPriority_Decision_Model_V3.csv` to the repository root.
-3. At https://share.streamlit.io/ choose **Create app** and select the repository, branch, and `app.py`.
-4. Deploy, test the district selector and charts, and share the public URL.
-
-## Methods and caution
-
-The dashboard shows **screening classifications**, not independently validated crop-loss predictions. The default thresholds are illustrative; the robustness percentages describe how often classifications hold under nine prespecified threshold scenarios. The app does not contain a GIS map because no matching district polygon geometry is bundled.
-
-## Attribution and disclosure
-
-Underlying sources include NISR Seasonal Agricultural Survey Season B 2025 and 2026, MODIS MOD13Q1, CHIRPS and ESA WorldCover 2021. Verify the provenance and licenses of the source tables before submission. The hackathon requires disclosure of AI assistance; this prototype's application code was drafted with ChatGPT assistance and should be reviewed and tested by the participating team.
-
-
-## Interactive district map
-Upload `AgriPriority_Districts_30.geojson` to the repository root. The map displays the provisional district recommendation category; the sidebar selects the district profile. The GeoJSON was created from the supplied DISTRICT_RW.zip, converted to WGS84 and simplified by 75 m for performance. Verify original boundary provenance before calling it official.
+## Scientific limitations
+V2 categories and V3 robustness figures are *screening tools*, not validated predictions. MODIS pixels are mixed at ~250 m, WorldCover cropland mask is from 2021, CHIRPS rainfall is coarser, and NISR reported changes do not establish causation. District polygon origin needs source verification.
