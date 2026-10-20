@@ -86,11 +86,18 @@ if st.session_state.get("chosen_district") not in district_names:
     st.session_state["chosen_district"] = district_names[0]
 if "map_version" not in st.session_state:
     st.session_state["map_version"] = 0
+if "map_focus" not in st.session_state:
+    st.session_state["map_focus"] = "all"
 
 # Each selected district gets a fresh selectbox key. This avoids writing
 # to widget-owned session state after the widget has been instantiated.
 def sidebar_district_changed(select_key):
     st.session_state["chosen_district"] = st.session_state[select_key]
+    st.session_state["map_focus"] = "district"
+    st.session_state["map_version"] += 1
+
+def show_all_rwanda():
+    st.session_state["map_focus"] = "all"
     st.session_state["map_version"] += 1
 
 st.title("🌾 AgriPriority Rwanda")
@@ -110,8 +117,9 @@ with st.sidebar:
         key=sidebar_key,
         on_change=sidebar_district_changed,
         args=(sidebar_key,),
-        help="You can also click a polygon on the map."
+        help="Selecting a district zooms to its boundaries; you can also click the map."
     )
+    st.button("🌍 Show all Rwanda", on_click=show_all_rwanda, use_container_width=True)
     st.subheader("Show recommendation categories")
     enabled = {}
     for category in CATEGORIES:
@@ -135,7 +143,8 @@ for feature in map_geo["features"]:
     feature["properties"]["Recommendation"] = category_lookup[name]
     feature["properties"]["Rainfall anomaly (%)"] = round(float(rain_lookup[name]), 1)
 
-# Fit Rwanda boundary to the map on every application update.
+# Calculate bounding rectangles for the national overview and each district.
+# GeoJSON is in WGS84 (longitude, latitude). Folium uses (latitude, longitude).
 all_points = [
     point
     for feature in geo["features"]
@@ -144,28 +153,40 @@ all_points = [
 if not all_points:
     st.error("District GeoJSON does not contain usable map coordinates.")
     st.stop()
-min_lon = min(p[0] for p in all_points)
-max_lon = max(p[0] for p in all_points)
-min_lat = min(p[1] for p in all_points)
-max_lat = max(p[1] for p in all_points)
+
+def points_bounds(points):
+    min_lon = min(p[0] for p in points)
+    max_lon = max(p[0] for p in points)
+    min_lat = min(p[1] for p in points)
+    max_lat = max(p[1] for p in points)
+    return [[min_lat, min_lon], [max_lat, max_lon]]
+
+rwanda_bounds = points_bounds(all_points)
+selected_geometry = next(
+    f["geometry"] for f in geo["features"]
+    if f["properties"]["District"] == selected_district
+)
+district_bounds = points_bounds(list(lon_lat_points(selected_geometry["coordinates"])))
+focus_on_district = st.session_state["map_focus"] == "district"
+view_bounds = district_bounds if focus_on_district else rwanda_bounds
 
 st.subheader("Interactive district map")
-st.caption("Click a district to update the profile below. Hover over a district to see its recommendation and rainfall anomaly.")
+st.caption(
+    "Selecting a district zooms to its boundaries. Click any district to update "
+    "the profile; use 'Show all Rwanda' to return to the national view."
+)
 
 m = folium.Map(
-    location=[(min_lat + max_lat) / 2, (min_lon + max_lon) / 2],
+    location=[
+        (view_bounds[0][0] + view_bounds[1][0]) / 2,
+        (view_bounds[0][1] + view_bounds[1][1]) / 2,
+    ],
     zoom_start=6,
     tiles="OpenStreetMap",
     control_scale=True,
     prefer_canvas=True,
 )
-# Maximum initial zoom is limited to 6 so the whole country remains visible
-# in the 570px-high embedded Streamlit map even on narrower screens.
-m.fit_bounds(
-    [[min_lat, min_lon], [max_lat, max_lon]],
-    padding=(32, 32),
-    max_zoom=6,
-)
+m.fit_bounds(view_bounds, padding=(36, 36), max_zoom=11 if focus_on_district else 6)
 
 def style_polygon(feature):
     name = feature["properties"]["District"]
@@ -208,6 +229,7 @@ response = st_folium(
 clicked_name = get_clicked_district(response, set(district_names))
 if clicked_name and clicked_name != selected_district:
     st.session_state["chosen_district"] = clicked_name
+    st.session_state["map_focus"] = "district"
     # Use a new map component after selection so an old click is not replayed.
     # Do not assign to the selectbox key here: Streamlit forbids that.
     st.session_state["map_version"] += 1

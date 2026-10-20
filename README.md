@@ -32,3 +32,9 @@ V2 categories and V3 robustness figures are *screening tools*, not validated pre
 - Deployment: replace all five files in the root of your existing GitHub repository and commit. No new Streamlit app is required.
 
 Live Streamlit behavior must be tested after deploying; syntax and local input validation have been checked.
+
+## Version 3.2: Zoom to selected district
+- Selecting a district from the sidebar automatically frames its full polygon.
+- Clicking a district polygon frames it and updates the profile.
+- **Show all Rwanda** resets to a full-country overview without clearing the selection.
+- The selected district retains its thick outline and all NISR indicators are unchanged.
