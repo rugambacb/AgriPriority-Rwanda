@@ -1,4 +1,6 @@
 import json
+import html
+import altair as alt
 import pandas as pd
 import streamlit as st
 import folium
@@ -15,11 +17,36 @@ CATEGORIES = [
     "Routine monitoring",
 ]
 PALETTE = {
-    "Priority field verification": "#C4473C",
-    "Investigate crop performance": "#E6A23C",
-    "Environmental monitoring": "#438DBD",
-    "Routine monitoring": "#58A76B",
+    "Priority field verification": "#D15B57",
+    "Investigate crop performance": "#DCA143",
+    "Environmental monitoring": "#528FC4",
+    "Routine monitoring": "#59A77E",
 }
+# Presentation helpers: colors convey screening categories, not probabilities.
+st.markdown("""
+<style>
+.block-container {padding-top: 1.5rem; max-width: 1320px;}
+h1, h2, h3 {letter-spacing: -0.025em;}
+div[data-testid="stMetric"] {
+  background: #f7f9fb; border: 1px solid #e3e8ef;
+  border-radius: 14px; padding: 18px 20px; min-height: 122px;
+}
+div[data-testid="stMetricLabel"] {font-weight: 550;}
+div[data-testid="stMetricValue"] {font-variant-numeric: tabular-nums;}
+[data-testid="stSidebar"] {border-right: 1px solid #e2e8f0;}
+.ap-banner {padding: 17px 20px; border-radius: 14px;
+  border: 1px solid; border-left-width: 6px; margin: 10px 0 18px;}
+.ap-banner-title {font-size: 0.80rem; font-weight: 700; letter-spacing: .045em;
+ text-transform: uppercase; margin-bottom: 4px;}
+.ap-banner-category {font-size: 1.22rem; font-weight: 750;}
+.ap-banner-copy {font-size: .92rem; margin-top: 8px;}
+.ap-legend {display:flex; align-items:center; gap:9px;
+  padding:9px 12px; border:1px solid #e2e8f0; border-radius:10px;
+  font-size:.88rem; min-height: 53px;}
+.ap-dot {width:13px; height:13px; border-radius:4px; flex:0 0 13px;}
+</style>
+""", unsafe_allow_html=True)
+
 REQUIRED = [
     "district", "priority_category", "evidence_summary",
     "mean_cropland_ndvi_anomaly", "mean_rainfall_anomaly_percent",
@@ -240,11 +267,12 @@ cols = st.columns(4)
 for col, category in zip(cols, CATEGORIES):
     with col:
         st.markdown(
-            f'<span style="display:inline-block;background:{PALETTE[category]};'
-            f'width:14px;height:14px;border-radius:3px;vertical-align:middle;'
-            f'margin-right:6px"></span>{category}',
+            '<div class="ap-legend">'
+            f'<span class="ap-dot" style="background:{PALETTE[category]}"></span>'
+            f'<span>{html.escape(category)}</span></div>',
             unsafe_allow_html=True,
         )
+
 st.caption(
     "Grey districts are filtered out; selected district has a thick black border. "
     "Boundary source: supplied Rwanda shapefile (authority and publication date not independently verified)."
@@ -252,8 +280,17 @@ st.caption(
 
 st.divider()
 st.subheader(f"District profile — {selected_district}")
-st.write("**V2 screening recommendation:**", selected["priority_category"])
-st.write("**Supporting evidence:**", selected["evidence_summary"])
+category_color = PALETTE[selected["priority_category"]]
+st.markdown(
+    '<div class="ap-banner" style="background:color-mix(in srgb, '
+    f'{category_color} 11%, transparent);border-color:{category_color};">'
+    '<div class="ap-banner-title">District screening recommendation</div>'
+    f'<div class="ap-banner-category">{html.escape(str(selected["priority_category"]))}</div>'
+    f'<div class="ap-banner-copy"><b>Evidence:</b> '
+    f'{html.escape(str(selected["evidence_summary"]))}</div>'
+    '</div>',
+    unsafe_allow_html=True,
+)
 
 # Explain the screening evidence and the next reasonable field action.
 def explain_district(row):
@@ -313,14 +350,17 @@ st.caption(
     "a cause, and the cropland mask is from 2021. These findings require field verification."
 )
 
+st.subheader("Key district indicators")
 metric_columns = st.columns(4)
 metric_columns[0].metric(
     "Rainfall anomaly",
     f"{selected['mean_rainfall_anomaly_percent']:+.1f}%",
+    help="CHIRPS rainfall departure from the March–June historical reference.",
 )
 metric_columns[1].metric(
     "NDVI anomaly",
     f"{selected['mean_cropland_ndvi_anomaly']:+.3f}",
+    help="MODIS cropland-masked NDVI change, not a direct crop-loss measure.",
 )
 metric_columns[2].metric(
     "NISR cultivated land",
@@ -329,35 +369,23 @@ metric_columns[2].metric(
 metric_columns[3].metric(
     "Field-verification scenarios",
     f"{int(selected['priority_field_verification_count'])} / 9",
+    help="Count of tested threshold scenarios; not a probability.",
 )
 
-left, right = st.columns(2)
+left, right = st.columns(2, gap="large")
 with left:
     st.subheader("NISR crop indicators")
-    st.metric(
-        "Maize yield change · 2025–2026",
-        f"{selected['change_maize_yield_kg_ha_2025_to_2026_pct']:+.1f}%",
-    )
-    st.metric(
-        "Bean yield change · 2025–2026",
-        f"{selected['change_bean_yield_kg_ha_2025_to_2026_pct']:+.1f}%",
-    )
-    st.metric(
-        "Maize cultivated area · 2026",
-        f"{selected['nisr_maize_cultivated_area_ha_2026']:,.0f} ha",
-    )
+    m1, m2 = st.columns(2)
+    m1.metric("Maize yield · 2025–26", f"{selected['change_maize_yield_kg_ha_2025_to_2026_pct']:+.1f}%")
+    m2.metric("Bean yield · 2025–26", f"{selected['change_bean_yield_kg_ha_2025_to_2026_pct']:+.1f}%")
+    st.metric("Maize cultivated area · 2026", f"{selected['nisr_maize_cultivated_area_ha_2026']:,.0f} ha")
 
 with right:
     st.subheader("Sensitivity to assumptions")
-    st.metric(
-        "Same V2 category across scenarios",
-        f"{selected['recommendation_stability_pct']:.1f}%",
-    )
-    st.write("**Classification stability:**", selected["stability_label"])
-    st.metric(
-        "Field-verification scenario frequency",
-        f"{selected['field_verification_frequency_pct']:.1f}%",
-    )
+    s1, s2 = st.columns(2)
+    s1.metric("V2 category stability", f"{selected['recommendation_stability_pct']:.1f}%")
+    s2.metric("Field verification frequency", f"{selected['field_verification_frequency_pct']:.1f}%")
+    st.markdown(f"**Classification stability:** {selected['stability_label']}")
     st.caption(
         "Nine scenarios test rainfall thresholds −10%, −15%, −20% and "
         "yield thresholds −3%, −5%, −10%. Frequency is NOT a probability."
@@ -365,10 +393,24 @@ with right:
 
 st.divider()
 st.subheader("National comparison · 30 districts")
-st.bar_chart(
-    df["priority_category"].value_counts().reindex(CATEGORIES, fill_value=0)
-    .rename("Districts")
+chart_data = pd.DataFrame({
+    "Recommendation": CATEGORIES,
+    "Districts": [int(df["priority_category"].eq(c).sum()) for c in CATEGORIES],
+})
+chart_data["color"] = chart_data["Recommendation"].map(PALETTE)
+chart = alt.Chart(chart_data).mark_bar(cornerRadiusEnd=5, size=26).encode(
+    x=alt.X("Districts:Q", title="Number of districts", axis=alt.Axis(tickMinStep=1)),
+    y=alt.Y("Recommendation:N", title=None, sort=CATEGORIES,
+            axis=alt.Axis(labelLimit=260, labelFontSize=12)),
+    color=alt.Color("Recommendation:N", legend=None,
+                    scale=alt.Scale(domain=CATEGORIES, range=[PALETTE[c] for c in CATEGORIES])),
+    tooltip=["Recommendation:N", "Districts:Q"],
 )
+labels = alt.Chart(chart_data).mark_text(align="left", dx=8, fontSize=13, fontWeight="bold").encode(
+    x="Districts:Q", y=alt.Y("Recommendation:N", sort=CATEGORIES), text="Districts:Q"
+)
+st.altair_chart((chart + labels).properties(height=230).configure_view(stroke=None),
+                use_container_width=True)
 view_fields = [
     "district", "priority_category",
     "mean_rainfall_anomaly_percent", "mean_cropland_ndvi_anomaly",
@@ -377,7 +419,20 @@ view_fields = [
     "nisr_physical_cultivated_land_ha_2026",
     "priority_field_verification_count", "recommendation_stability_pct",
 ]
-st.dataframe(filtered[view_fields], use_container_width=True, hide_index=True)
+st.dataframe(
+    filtered[view_fields].rename(columns={
+        "district": "District",
+        "priority_category": "Recommendation",
+        "mean_rainfall_anomaly_percent": "Rainfall anomaly (%)",
+        "mean_cropland_ndvi_anomaly": "NDVI anomaly",
+        "change_maize_yield_kg_ha_2025_to_2026_pct": "Maize yield change (%)",
+        "change_bean_yield_kg_ha_2025_to_2026_pct": "Bean yield change (%)",
+        "nisr_physical_cultivated_land_ha_2026": "NISR cultivated land (ha)",
+        "priority_field_verification_count": "Field-verification scenarios",
+        "recommendation_stability_pct": "Category stability (%)",
+    }),
+    use_container_width=True, hide_index=True
+)
 st.download_button(
     "Download filtered district results (CSV)",
     data=filtered.to_csv(index=False).encode("utf-8"),
