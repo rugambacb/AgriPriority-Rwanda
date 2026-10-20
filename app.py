@@ -76,7 +76,7 @@ try:
         name = feature['properties']['District']
         feature['properties']['Recommendation'] = category_by_district[name]
         feature['properties']['Rainfall anomaly (%)'] = round(float(rainfall_by_district[name]), 1)
-    m = folium.Map(location=[-1.94, 29.87], zoom_start=8, tiles='CartoDB positron')
+    m = folium.Map(location=[-1.94, 29.87], zoom_start=8, tiles="OpenStreetMap")
     folium.GeoJson(
         geo,
         name='District recommendation',
