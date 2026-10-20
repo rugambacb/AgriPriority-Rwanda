@@ -38,3 +38,6 @@ Live Streamlit behavior must be tested after deploying; syntax and local input v
 - Clicking a district polygon frames it and updates the profile.
 - **Show all Rwanda** resets to a full-country overview without clearing the selection.
 - The selected district retains its thick outline and all NISR indicators are unchanged.
+
+## V3.3 addition
+The district profile now includes a “Why this district?” panel: four evidence statements, a category-specific follow-up action, and V3 sensitivity context. No existing model thresholds or ranking values were changed.

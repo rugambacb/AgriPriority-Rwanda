@@ -255,6 +255,64 @@ st.subheader(f"District profile — {selected_district}")
 st.write("**V2 screening recommendation:**", selected["priority_category"])
 st.write("**Supporting evidence:**", selected["evidence_summary"])
 
+# Explain the screening evidence and the next reasonable field action.
+def explain_district(row):
+    rain = float(row["mean_rainfall_anomaly_percent"])
+    ndvi = float(row["mean_cropland_ndvi_anomaly"])
+    maize = float(row["change_maize_yield_kg_ha_2025_to_2026_pct"])
+    beans = float(row["change_bean_yield_kg_ha_2025_to_2026_pct"])
+    farmland = float(row["nisr_physical_cultivated_land_ha_2026"])
+    category = row["priority_category"]
+    findings = [
+        f"CHIRPS rainfall was {abs(rain):.1f}% {'below' if rain < 0 else 'above'} "
+        "the March–June 2019–2025 seasonal reference." if rain != 0 else
+        "CHIRPS rainfall matched its historical seasonal reference.",
+        f"MODIS cropland-masked NDVI changed by {ndvi:+.3f} versus the reference "
+        f"({'lower' if ndvi < 0 else 'higher' if ndvi > 0 else 'unchanged'} greenness).",
+        f"NISR maize yield changed {maize:+.1f}% and bean yield {beans:+.1f}% "
+        "between Season B 2025 and Season B 2026.",
+        f"NISR reports approximately {farmland:,.0f} hectares of physically cultivated land "
+        "in this district for Season B 2026.",
+    ]
+    actions = {
+        "Priority field verification": (
+            "Prioritize a field review with local agronomists; check crop growth stage, "
+            "rainfall timing, field conditions, pests and inputs before considering support."
+        ),
+        "Investigate crop performance": (
+            "Review the yield change with agricultural extension officers and compare "
+            "crop area, planting dates, pests, soil conditions and management practices."
+        ),
+        "Environmental monitoring": (
+            "Track the next rainfall and vegetation observations and ask extension "
+            "officers whether localized crop issues are being reported."
+        ),
+        "Routine monitoring": (
+            "Continue regular monitoring; revisit the district if future indicators "
+            "or verified field reports change."
+        ),
+    }
+    stability = float(row["recommendation_stability_pct"])
+    robustness = (
+        f"The current category was repeated in {int(row['same_category_scenarios'])} "
+        f"of 9 tested threshold scenarios ({stability:.1f}%). "
+        "This measures sensitivity to chosen rules, NOT probability or validation accuracy."
+    )
+    return findings, actions.get(category, "Review the district indicators with local experts."), robustness
+
+st.subheader("Why this district?")
+st.caption("Evidence behind the provisional recommendation and suggested follow-up")
+observations, proposed_action, robustness_note = explain_district(selected)
+for observation in observations:
+    st.markdown(f"- {observation}")
+st.markdown(f"**Suggested next action:** {proposed_action}")
+st.info(robustness_note)
+st.caption(
+    "The screening rules use illustrative rainfall (−15%) and yield (−5%) thresholds, "
+    "and NDVI below its reference. A year-on-year yield change does not establish "
+    "a cause, and the cropland mask is from 2021. These findings require field verification."
+)
+
 metric_columns = st.columns(4)
 metric_columns[0].metric(
     "Rainfall anomaly",
