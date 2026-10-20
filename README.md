@@ -24,3 +24,11 @@ Streamlit dashboard with 30 districts, NISR Season B 2025–2026 indicators, MOD
 
 ## Scientific limitations
 V2 categories and V3 robustness figures are *screening tools*, not validated predictions. MODIS pixels are mixed at ~250 m, WorldCover cropland mask is from 2021, CHIRPS rainfall is coarser, and NISR reported changes do not establish causation. District polygon origin needs source verification.
+
+## Version 3.1 patch
+- Fixes `StreamlitWidgetAlreadyInstantiatedError` after clicking a polygon: the sidebar selectbox key is never assigned after widget creation.
+- Gives each new map interaction a new component key so old click events are not replayed on rerun.
+- Limits first-visit zoom to level 6 to show all Rwanda district polygons in the embedded map.
+- Deployment: replace all five files in the root of your existing GitHub repository and commit. No new Streamlit app is required.
+
+Live Streamlit behavior must be tested after deploying; syntax and local input validation have been checked.

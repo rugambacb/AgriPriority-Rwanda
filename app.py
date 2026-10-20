@@ -84,11 +84,14 @@ except Exception as exc:
 district_names = sorted(df["district"].tolist())
 if st.session_state.get("chosen_district") not in district_names:
     st.session_state["chosen_district"] = district_names[0]
-if st.session_state.get("district_select") not in district_names:
-    st.session_state["district_select"] = st.session_state["chosen_district"]
+if "map_version" not in st.session_state:
+    st.session_state["map_version"] = 0
 
-def sidebar_district_changed():
-    st.session_state["chosen_district"] = st.session_state["district_select"]
+# Each selected district gets a fresh selectbox key. This avoids writing
+# to widget-owned session state after the widget has been instantiated.
+def sidebar_district_changed(select_key):
+    st.session_state["chosen_district"] = st.session_state[select_key]
+    st.session_state["map_version"] += 1
 
 st.title("🌾 AgriPriority Rwanda")
 st.caption("NISR Big Data Hackathon 2026 · District-level agricultural screening prototype")
@@ -99,11 +102,14 @@ st.warning(
 
 with st.sidebar:
     st.header("Explore Rwanda")
+    sidebar_key = f"district_select_{st.session_state['chosen_district']}"
     st.selectbox(
         "District profile",
         district_names,
-        key="district_select",
+        index=district_names.index(st.session_state["chosen_district"]),
+        key=sidebar_key,
         on_change=sidebar_district_changed,
+        args=(sidebar_key,),
         help="You can also click a polygon on the map."
     )
     st.subheader("Show recommendation categories")
@@ -148,12 +154,18 @@ st.caption("Click a district to update the profile below. Hover over a district 
 
 m = folium.Map(
     location=[(min_lat + max_lat) / 2, (min_lon + max_lon) / 2],
-    zoom_start=8,
+    zoom_start=6,
     tiles="OpenStreetMap",
     control_scale=True,
     prefer_canvas=True,
 )
-m.fit_bounds([[min_lat, min_lon], [max_lat, max_lon]], padding=(20, 20))
+# Maximum initial zoom is limited to 6 so the whole country remains visible
+# in the 570px-high embedded Streamlit map even on narrower screens.
+m.fit_bounds(
+    [[min_lat, min_lon], [max_lat, max_lon]],
+    padding=(32, 32),
+    max_zoom=6,
+)
 
 def style_polygon(feature):
     name = feature["properties"]["District"]
@@ -186,7 +198,7 @@ folium.GeoJson(
 
 response = st_folium(
     m,
-    key="agripriority_district_map",
+    key=f"agripriority_district_map_{st.session_state['map_version']}",
     use_container_width=True,
     height=570,
     returned_objects=["last_active_drawing"],
@@ -196,7 +208,9 @@ response = st_folium(
 clicked_name = get_clicked_district(response, set(district_names))
 if clicked_name and clicked_name != selected_district:
     st.session_state["chosen_district"] = clicked_name
-    st.session_state["district_select"] = clicked_name
+    # Use a new map component after selection so an old click is not replayed.
+    # Do not assign to the selectbox key here: Streamlit forbids that.
+    st.session_state["map_version"] += 1
     st.rerun()
 
 st.markdown("**Map legend**")
