@@ -32,7 +32,20 @@ div[data-testid="stMetric"] {
   background: #f7f9fb; border: 1px solid #e3e8ef;
   border-radius: 14px; padding: 18px 20px; min-height: 122px;
 }
-div[data-testid="stMetricLabel"] {font-weight: 550;}
+div[data-testid="stMetricLabel"] {
+    font-weight: 550;
+    min-height: 2.5rem;
+    white-space: normal !important;
+    overflow: visible !important;
+}
+
+div[data-testid="stMetricLabel"] p {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere;
+    line-height: 1.25;
+}
 div[data-testid="stMetricValue"] {font-variant-numeric: tabular-nums;}
 div[data-testid="stMetricValue"] div {
   font-size: clamp(1.35rem, 2vw, 2rem);
