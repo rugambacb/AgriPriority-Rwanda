@@ -38,6 +38,12 @@ div[data-testid="stMetricLabel"] {
   font-weight: 550; height: auto !important; min-width: 0 !important;
   white-space: normal !important; overflow: visible !important;
   text-overflow: clip !important; flex-wrap: wrap !important;
+  line-height: 1.25 !important;
+}
+div[data-testid="stMetricLabel"] > div:not([data-testid="stTooltipIcon"]) {
+  min-width: 0 !important; max-width: 100% !important; height: auto !important;
+  white-space: normal !important; overflow: visible !important;
+  text-overflow: clip !important;
 }
 div[data-testid="stMetricLabel"] [data-testid="stMarkdownContainer"] {
   display: block !important; flex: 1 1 auto !important;
@@ -398,24 +404,24 @@ metric_columns[2].metric(
     f"{selected['nisr_physical_cultivated_land_ha_2026']:,.0f} ha",
 )
 metric_columns[3].metric(
-    "Field-verification scenarios",
+    "Field checks",
     f"{int(selected['priority_field_verification_count'])} / 9",
-    help="Count of tested threshold scenarios; not a probability.",
+    help="Number of tested threshold scenarios that flag this district for field verification; not a probability.",
 )
 
 left, right = st.columns(2, gap="large")
 with left:
     st.subheader("NISR crop indicators")
     m1, m2 = st.columns(2)
-    m1.metric("Maize yield · 2025–26", f"{selected['change_maize_yield_kg_ha_2025_to_2026_pct']:+.1f}%")
-    m2.metric("Bean yield · 2025–26", f"{selected['change_bean_yield_kg_ha_2025_to_2026_pct']:+.1f}%")
-    st.metric("Maize cultivated area · 2026", f"{selected['nisr_maize_cultivated_area_ha_2026']:,.0f} ha")
+    m1.metric("Maize yield Δ", f"{selected['change_maize_yield_kg_ha_2025_to_2026_pct']:+.1f}%", help="Percentage change between NISR Season B 2025 and Season B 2026.")
+    m2.metric("Bean yield Δ", f"{selected['change_bean_yield_kg_ha_2025_to_2026_pct']:+.1f}%", help="Percentage change between NISR Season B 2025 and Season B 2026.")
+    st.metric("Maize area · 2026", f"{selected['nisr_maize_cultivated_area_ha_2026']:,.0f} ha", help="NISR-reported maize cultivated area for Season B 2026.")
 
 with right:
     st.subheader("Sensitivity to assumptions")
     s1, s2 = st.columns(2)
-    s1.metric("V2 category stability", f"{selected['recommendation_stability_pct']:.1f}%")
-    s2.metric("Field verification frequency", f"{selected['field_verification_frequency_pct']:.1f}%")
+    s1.metric("Category stability", f"{selected['recommendation_stability_pct']:.1f}%", help="Share of tested threshold scenarios that retain the current category.")
+    s2.metric("Field-check rate", f"{selected['field_verification_frequency_pct']:.1f}%", help="Share of tested threshold scenarios that flag field verification; not a probability.")
     st.markdown(f"**Classification stability:** {selected['stability_label']}")
     st.caption(
         "Nine scenarios test rainfall thresholds −10%, −15%, −20% and "
@@ -449,18 +455,44 @@ view_fields = [
     "nisr_physical_cultivated_land_ha_2026",
     "priority_field_verification_count", "recommendation_stability_pct",
 ]
+district_table = filtered[view_fields].rename(columns={
+    "district": "District",
+    "priority_category": "Recommendation",
+    "mean_rainfall_anomaly_percent": "Rainfall anomaly (%)",
+    "mean_cropland_ndvi_anomaly": "NDVI anomaly",
+    "change_maize_yield_kg_ha_2025_to_2026_pct": "Maize yield change (%)",
+    "change_bean_yield_kg_ha_2025_to_2026_pct": "Bean yield change (%)",
+    "nisr_physical_cultivated_land_ha_2026": "Cultivated land (ha)",
+    "priority_field_verification_count": "Field checks / 9",
+    "recommendation_stability_pct": "Stability (%)",
+})
 st.dataframe(
-    filtered[view_fields].rename(columns={
-        "district": "District",
-        "priority_category": "Recommendation",
-        "mean_rainfall_anomaly_percent": "Rainfall anomaly (%)",
-        "mean_cropland_ndvi_anomaly": "NDVI anomaly",
-        "change_maize_yield_kg_ha_2025_to_2026_pct": "Maize yield change (%)",
-        "change_bean_yield_kg_ha_2025_to_2026_pct": "Bean yield change (%)",
-        "nisr_physical_cultivated_land_ha_2026": "NISR cultivated land (ha)",
-        "priority_field_verification_count": "Field-verification scenarios",
-        "recommendation_stability_pct": "Category stability (%)",
-    }),
+    district_table,
+    column_config={
+        "District": st.column_config.TextColumn("District", width="small"),
+        "Recommendation": st.column_config.TextColumn("Recommendation", width="medium"),
+        "Rainfall anomaly (%)": st.column_config.NumberColumn(
+            "Rainfall Δ (%)", help="CHIRPS rainfall departure from the March–June historical reference.", format="%.1f", width="small"
+        ),
+        "NDVI anomaly": st.column_config.NumberColumn(
+            "NDVI Δ", help="MODIS cropland-masked NDVI change versus the reference.", format="%.3f", width="small"
+        ),
+        "Maize yield change (%)": st.column_config.NumberColumn(
+            "Maize yield Δ (%)", help="NISR Season B 2025 to Season B 2026 percentage change.", format="%.1f", width="small"
+        ),
+        "Bean yield change (%)": st.column_config.NumberColumn(
+            "Bean yield Δ (%)", help="NISR Season B 2025 to Season B 2026 percentage change.", format="%.1f", width="small"
+        ),
+        "Cultivated land (ha)": st.column_config.NumberColumn(
+            "Cultivated land (ha)", format="%.0f", width="small"
+        ),
+        "Field checks / 9": st.column_config.NumberColumn(
+            "Field checks / 9", help="Number of nine threshold scenarios flagging field verification.", format="%.0f", width="small"
+        ),
+        "Stability (%)": st.column_config.NumberColumn(
+            "Stability (%)", help="Percentage of tested scenarios retaining the current category.", format="%.1f", width="small"
+        ),
+    },
     use_container_width=True, hide_index=True
 )
 st.download_button(

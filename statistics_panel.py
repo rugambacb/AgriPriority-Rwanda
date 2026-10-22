@@ -60,8 +60,15 @@ def show_statistics(model):
             if pd.isna(values).any():
                 st.info('NISR reports a missing value for this district and measure. No zero was imputed.')
             else:
-                fig=go.Figure(go.Bar(x=['2025','2026'], y=values, marker_color=[COLORS['2025'],COLORS['2026']], text=[f'{x:,.1f}' for x in values], textposition='outside', hovertemplate='%{x}: %{y:,.2f} '+units+'<extra></extra>'))
+                fig=go.Figure(go.Bar(x=['2025','2026'], y=values, marker_color=[COLORS['2025'],COLORS['2026']], text=[f'{x:,.1f}' for x in values], textposition='outside', cliponaxis=False, hovertemplate='%{x}: %{y:,.2f} '+units+'<extra></extra>'))
                 clean_plot(fig, f'{crop_label} — {measure_label} in {selected_name}', units)
+                # Explicit categorical axis prevents Plotly from treating year strings as numbers
+                # and adding misleading half-year ticks such as 2024.5 or 2025.5.
+                fig.update_xaxes(
+                    type='category', categoryorder='array', categoryarray=['2025','2026'],
+                    tickmode='array', tickvals=['2025','2026'], ticktext=['2025','2026'],
+                    title_text='NISR Season B year', automargin=True,
+                )
                 st.plotly_chart(fig, use_container_width=True, key='year_compare_chart')
                 diff=values[1]-values[0]
                 st.write(f'**Interpretation:** {selected_name} reported {values[0]:,.1f} {units} in Season B 2025 and {values[1]:,.1f} {units} in Season B 2026 (difference: {diff:+,.1f} {units}). This is a descriptive year-on-year comparison, not evidence of cause.')
@@ -112,7 +119,7 @@ def show_statistics(model):
             # Compact, explicit labels plus a rotated x-axis keep all nine
             # threshold combinations readable on laptop and desktop screens.
             scenario_labels = [
-                f"R{int(column.split('_')[1])}% / Y{int(column.split('_')[3])}%"
+                f"R{int(column.split('_')[1])} / Y{int(column.split('_')[3])}"
                 for column in heat.columns
             ]
             fig=go.Figure(go.Heatmap(
@@ -125,9 +132,9 @@ def show_statistics(model):
             fig = clean_plot(fig, 'Red cell = field verification under that scenario')
             fig.update_layout(
                 height=max(360, 34 * len(options) + 150),
-                margin=dict(l=95, r=20, t=65, b=105),
+                margin=dict(l=95, r=20, t=65, b=135),
             )
-            fig.update_xaxes(tickangle=-35, tickfont=dict(size=10), automargin=True)
+            fig.update_xaxes(type='category', tickangle=-40, tickfont=dict(size=10), automargin=True, title_text='Rainfall / yield thresholds')
             fig.update_yaxes(tickfont=dict(size=11), automargin=True)
             st.plotly_chart(fig,use_container_width=True,key='scenario_heatmap_chart')
             st.caption('Each column varies the rainfall-deficit and yield-decline screening thresholds. Red cells are rule matches, not observed losses or probabilities.')
