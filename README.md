@@ -1,33 +1,29 @@
-# AgriPriority Rwanda — Version 4.1 Visual Refresh
+# AgriPriority Rwanda — Version 4.0: Statistical Evidence Dashboard
 
-This update improves chart clarity and consistency while preserving the existing district data, screening logic, map interactions, and statistical calculations.
+Preserves the working Map V3.4.1 district selection, automatic map zoom, category filters, agricultural explanation and V3 screening model. Adds interactive statistics with real NISR Season B 2025–2026 comparisons for all 30 districts.
 
-## Visual improvements
+## Install and deploy
+Upload **all seven files** directly to your existing GitHub repository root (replace matching filenames). Entry point: `app.py`. Commit and Streamlit Community Cloud should redeploy.
 
-- Uses a consistent screening-category palette across the map, national category chart, district comparisons, scatterplot, and sensitivity heatmap.
-- Replaces the static national category bars with an interactive chart showing district counts and percentages.
-- Makes 2025 and 2026 easier to distinguish in NISR year comparisons, with value labels and more readable hover details.
-- Colours district-comparison bars by their existing screening category and keeps district values labelled.
-- Improves scatterplot labels, hover precision, point contrast, axis styling, and the zero-change reference line.
-- Clarifies sensitivity heatmap cells with `FLAG` / dash labels, compact scenario labels, and clearer hover text.
-- Reduces the chance that long district-indicator values are clipped in metric cards.
+New files: `statistics_panel.py` and `AgriPriority_NISR_SeasonB_2025_2026_Comparison_v1.csv`. Version 4 requires Plotly 6.4 or later as listed in `requirements.txt`. V3.4.1 avoided Altair because of an import incompatibility in a Python 3.14 environment. This release **does not import Altair**; Plotly is a separate library and must still be verified in your deployed environment.
 
-## Deploy to the existing Streamlit Community Cloud app
+## New tabs
+1. NISR year comparison: select crop, measure and district; see 2025 vs 2026.
+2. Compare districts: grouped analysis of chosen statistics.
+3. Environmental relationships: interactive scatter chart and descriptive Pearson correlation (n=30 when no missingness).
+4. Sensitivity evidence: heatmap of nine classification scenarios.
 
-1. Open the GitHub repository connected to the existing Streamlit app.
-2. Upload **all seven files in this folder** to the repository root and replace the matching files:
-   - `app.py`
-   - `statistics_panel.py`
-   - `requirements.txt`
-   - `AgriPriority_Decision_Model_V3.csv`
-   - `AgriPriority_Districts_30.geojson`
-   - `AgriPriority_NISR_SeasonB_2025_2026_Comparison_v1.csv`
-   - `README.md`
-3. Commit the changes and allow Streamlit Community Cloud to redeploy.
-4. Verify district selection and map zoom, then test each of the four Statistical Evidence Center tabs.
+## Technical and scientific notes
+- The NISR comparison file contains earlier exploratory June–August columns, but V4 charts only use the selected NISR 2025/2026 fields. The active V3 satellite/model file is the season-aligned MODIS/CHIRPS workflow.
+- Empty crop cells are not converted to zeros; displays omit missing observations.
+- Charts are descriptive and cannot establish crop-loss causation or probability.
+- NISR Table 29 has a source-year discrepancy and is excluded.
+- Validate original boundary dataset provenance and survey uncertainty before formal planning decisions.
 
-The application entry point remains `app.py`. The project does not import Altair. Plotly remains required as specified in `requirements.txt`.
+## UI readability update (October 2026)
+- KPI metric labels and values now explicitly override Streamlit truncation styles and can wrap instead of ending in ellipses.
+- Sensitivity heatmap scenario labels use compact rainfall/yield thresholds, rotated labels, adjusted margins, and height based on the number of selected districts.
+- No district data, decision thresholds, source values, or statistical calculations were changed for this UI update.
 
-## Scientific interpretation
-
-The charts are descriptive. District-level relationships do not establish causation, two years do not establish a long-term trend, and screening categories are not probabilities or validated crop-loss predictions. Missing survey values are not replaced with zero. Field verification and source-data validation remain necessary before operational decisions.
+## Quick checks
+Open the application, click Kirehe on the map, verify automatic zoom, then scroll to the Statistical Evidence Center. Choose Maize > Yield > Kayonza, inspect the 2025/2026 chart. Try the scatter plot and heatmap.

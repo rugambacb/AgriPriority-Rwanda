@@ -3,7 +3,6 @@ import html
 import pandas as pd
 import streamlit as st
 import folium
-import plotly.graph_objects as go
 from statistics_panel import show_statistics
 from streamlit_folium import st_folium
 
@@ -30,28 +29,41 @@ st.markdown("""
 h1, h2, h3 {letter-spacing: -0.025em;}
 div[data-testid="stMetric"] {
   background: #f7f9fb; border: 1px solid #e3e8ef;
-  border-radius: 14px; padding: 18px 20px; min-height: 122px;
+  border-radius: 14px; padding: 18px 20px; min-height: 138px;
+  height: auto !important; align-items: flex-start;
 }
+/* Streamlit's default metric label can use ellipsis/nowrap. Override both the
+   label wrapper and its nested Markdown elements so long labels can wrap. */
 div[data-testid="stMetricLabel"] {
-    font-weight: 550;
-    min-height: 2.5rem;
-    white-space: normal !important;
-    overflow: visible !important;
+  font-weight: 550; height: auto !important; min-width: 0 !important;
+  white-space: normal !important; overflow: visible !important;
+  text-overflow: clip !important; flex-wrap: wrap !important;
 }
-
+div[data-testid="stMetricLabel"] [data-testid="stMarkdownContainer"] {
+  display: block !important; flex: 1 1 auto !important;
+  min-width: 0 !important; max-width: 100% !important;
+  white-space: normal !important; overflow: visible !important;
+  text-overflow: clip !important;
+}
 div[data-testid="stMetricLabel"] p {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    overflow-wrap: anywhere;
-    line-height: 1.25;
+  display: block !important; height: auto !important;
+  white-space: normal !important; overflow: visible !important;
+  text-overflow: clip !important; overflow-wrap: break-word !important;
+  word-break: normal !important; -webkit-line-clamp: unset !important;
+  -webkit-box-orient: initial !important; max-width: 100% !important;
 }
-div[data-testid="stMetricValue"] {font-variant-numeric: tabular-nums;}
+div[data-testid="stMetricValue"] {
+  font-variant-numeric: tabular-nums; max-width: 100% !important;
+  min-width: 0 !important; overflow: visible !important; flex-wrap: wrap !important;
+}
+div[data-testid="stMetricValue"],
+div[data-testid="stMetricValue"] > div,
 div[data-testid="stMetricValue"] div {
-  font-size: clamp(1.35rem, 2vw, 2rem);
-  overflow-wrap: anywhere;
+  white-space: normal !important; overflow: visible !important;
+  text-overflow: clip !important; overflow-wrap: anywhere !important;
+  -webkit-line-clamp: unset !important; -webkit-box-orient: initial !important;
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
-
 [data-testid="stSidebar"] {border-right: 1px solid #e2e8f0;}
 .ap-banner {padding: 17px 20px; border-radius: 14px;
   border: 1px solid; border-left-width: 6px; margin: 10px 0 18px;}
@@ -382,9 +394,8 @@ metric_columns[1].metric(
     help="MODIS cropland-masked NDVI change, not a direct crop-loss measure.",
 )
 metric_columns[2].metric(
-    "Cultivated land (ha)",
-    f"{selected['nisr_physical_cultivated_land_ha_2026']:,.0f}",
-    help="NISR estimate of physically cultivated land for Season B 2026.",
+    "NISR cultivated land",
+    f"{selected['nisr_physical_cultivated_land_ha_2026']:,.0f} ha",
 )
 metric_columns[3].metric(
     "Field-verification scenarios",
@@ -413,39 +424,23 @@ with right:
 
 st.divider()
 st.subheader("National comparison · 30 districts")
+# Stable, dependency-free comparison chart (works without Altair).
 chart_counts = df["priority_category"].value_counts().reindex(CATEGORIES, fill_value=0)
-chart_total = int(chart_counts.sum())
-chart_percentages = [100 * int(chart_counts[category]) / chart_total if chart_total else 0 for category in CATEGORIES]
-category_chart = go.Figure(
-    go.Bar(
-        x=[int(chart_counts[category]) for category in CATEGORIES],
-        y=CATEGORIES,
-        orientation="h",
-        marker=dict(
-            color=[PALETTE[category] for category in CATEGORIES],
-            line=dict(color="#FFFFFF", width=1.5),
-        ),
-        text=[f"{int(chart_counts[category])} ({percentage:.1f}%)" for category, percentage in zip(CATEGORIES, chart_percentages)],
-        textposition="outside",
-        cliponaxis=False,
-        customdata=chart_percentages,
-        hovertemplate="<b>%{y}</b><br>Districts: %{x}<br>Share of districts: %{customdata:.1f}%<extra></extra>",
+max_count = max(int(chart_counts.max()), 1)
+for category in CATEGORIES:
+    count = int(chart_counts[category])
+    width = 100 * count / max_count
+    st.markdown(
+        '<div style="display:flex;align-items:center;gap:14px;margin:9px 0">'
+        f'<div style="width:235px;flex-shrink:0;font-size:0.88rem">{html.escape(category)}</div>'
+        '<div style="flex:1;background:#edf2f7;border-radius:8px;height:26px;overflow:hidden">'
+        f'<div style="background:{PALETTE[category]};height:100%;width:{width:.2f}%;'
+        'border-radius:8px"></div></div>'
+        f'<div style="width:35px;text-align:right;font-weight:700">{count}</div>'
+        '</div>',
+        unsafe_allow_html=True,
     )
-)
-category_chart.update_layout(
-    title=dict(text="Districts by screening category", font=dict(size=18, color="#263445"), x=0),
-    font=dict(family="Arial, sans-serif", size=12, color="#475569"),
-    height=340,
-    margin=dict(l=12, r=80, t=55, b=30),
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    showlegend=False,
-    bargap=0.35,
-)
-category_chart.update_xaxes(title_text="Number of districts", dtick=5, rangemode="tozero", showgrid=True, gridcolor="rgba(148,163,184,0.22)", zeroline=False)
-category_chart.update_yaxes(title_text="", autorange="reversed", showgrid=False)
-st.plotly_chart(category_chart, use_container_width=True, key="national_category_chart")
-st.caption("Bar labels show the district count and percentage of all 30 districts. Colours match the map and statistical evidence charts.")
+st.caption("Number of districts in each provisional screening category.")
 view_fields = [
     "district", "priority_category",
     "mean_rainfall_anomaly_percent", "mean_cropland_ndvi_anomaly",
