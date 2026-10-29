@@ -1,3 +1,22 @@
+# AgriPriority Rwanda — V4.3 National Statistical Insights
+
+This builds directly on the latest working `UI_FIX_v2` package and keeps the existing map, district profiles, year comparison, comparisons, scatterplots, sensitivity heatmap, NISR files, and threshold logic. The only additions are `national_insights.py` and two integration lines in `app.py`.
+
+## Deploy
+Upload all 8 files directly to the existing GitHub repository root, replacing matching files. Main file `app.py`. Streamlit Community Cloud will redeploy after commit.
+
+## New section
+After the existing Agricultural Statistics & Evidence Center, scroll to **National Statistical Insights**:
+1. District rankings: choose indicator, direction and 5/10/15/30 districts.
+2. Descriptive statistics: distribution, mean, median, min, max, sample standard deviation and number of observations.
+3. Crop performance contrasts: compare positive/negative maize and bean yield changes and download filtered CSV.
+
+## Interpretation
+All results are descriptive and district-level. Survey-based yields may carry uncertainty. Districts are not weighted by cultivated area. Screening categories and nine-scenario classifications are not modified. Agricultural loss, causal effects, and model predictive accuracy are NOT estimated.
+
+## Testing
+Check Bugesera district profile, map click selection and zoom, each old statistics tab, then the three new insights tabs. Test empty crop-pattern selection.
+
 # AgriPriority Streamlit — UI Fix v2
 
 This package preserves the existing AgriPriority screening logic, 30-district datasets, map interactions, and statistical evidence. It contains targeted presentation fixes based on the latest deployed screenshots.

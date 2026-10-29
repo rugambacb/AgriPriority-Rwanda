@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 import folium
 from statistics_panel import show_statistics
+from national_insights import show_national_insights
 from streamlit_folium import st_folium
 
 st.set_page_config(page_title="AgriPriority Rwanda", page_icon="🌾", layout="wide")
@@ -503,6 +504,7 @@ st.download_button(
 )
 
 show_statistics(df)
+show_national_insights(df)
 
 with st.expander("Sources, screening rules and limitations"):
     st.markdown("""
