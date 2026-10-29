@@ -5,6 +5,7 @@ import streamlit as st
 import folium
 from statistics_panel import show_statistics
 from national_insights import show_national_insights
+from executive_overview import show_executive_overview
 from streamlit_folium import st_folium
 
 st.set_page_config(page_title="AgriPriority Rwanda", page_icon="🌾", layout="wide")
@@ -234,6 +235,8 @@ selected_geometry = next(
 district_bounds = points_bounds(list(lon_lat_points(selected_geometry["coordinates"])))
 focus_on_district = st.session_state["map_focus"] == "district"
 view_bounds = district_bounds if focus_on_district else rwanda_bounds
+
+show_executive_overview(df)
 
 st.subheader("Interactive district map")
 st.caption(
