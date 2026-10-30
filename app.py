@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 import html
 import pandas as pd
 import streamlit as st
@@ -10,8 +11,8 @@ from streamlit_folium import st_folium
 
 st.set_page_config(page_title="AgriPriority Rwanda", page_icon="🌾", layout="wide")
 
-DATA_FILE = "AgriPriority_Decision_Model_V3.csv"
-MAP_FILE = "AgriPriority_Districts_30.geojson"
+DATA_FILE = Path(__file__).resolve().parent / "data" / "AgriPriority_Decision_Model_V3.csv"
+MAP_FILE = Path(__file__).resolve().parent / "data" / "AgriPriority_Districts_30.geojson"
 CATEGORIES = [
     "Priority field verification",
     "Investigate crop performance",

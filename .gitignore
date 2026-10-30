@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.streamlit/secrets.toml
+student_cards/*.pdf
+student_cards/*.png
+student_cards/*.jpg
+student_cards/*.jpeg
+student_cards/*.webp
+.DS_Store
