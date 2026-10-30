@@ -1,10 +1,11 @@
 """AgriPriority evidence center: descriptive charts, not risk predictions."""
+from pathlib import Path
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 
-SOURCE = "AgriPriority_NISR_SeasonB_2025_2026_Comparison_v1.csv"
+SOURCE = Path(__file__).resolve().parent / "data" / "AgriPriority_NISR_SeasonB_2025_2026_Comparison_v1.csv"
 COLORS = {"2025": "#96ADBF", "2026": "#3477A6"}
 CROPS = {"Maize": "maize", "Beans": "bean", "Irish potato": "irish_potato", "Cassava": "cassava", "Rice": "rice", "Sorghum": "sorghum", "Sweet potato": "sweet_potato"}
 MEASURES = {"Yield (kg/ha)": ("yield_kg_ha", "kg/ha"), "Production (metric tonnes)": ("production_mt", "metric tonnes"), "Cultivated area (ha)": ("cultivated_area_ha", "ha"), "Harvested area (ha)": ("harvested_area_ha", "ha")}
