@@ -1,0 +1,31 @@
+district,v4_4_rainfall_anomaly_pct,median_baseline_audit_pct,audit_minus_dashboard_percentage_points,absolute_difference_pp,existing_screening_category,what_if_category_using_median_audit,category_changes
+Bugesera,-14.09907242,-14.07434384,+0.02472858,0.02472858,Investigate crop performance,Investigate crop performance,False
+Burera,-13.54038788,-13.53664795,+0.00373992,0.00373992,Routine monitoring,Routine monitoring,False
+Gakenke,-15.94162501,-15.99095085,-0.04932584,0.04932584,Environmental monitoring,Environmental monitoring,False
+Gasabo,-14.95184547,-15.01116966,-0.05932419,0.05932419,Routine monitoring,Environmental monitoring,True
+Gatsibo,-17.63617847,-17.62651192,+0.00966655,0.00966655,Environmental monitoring,Environmental monitoring,False
+Gicumbi,-13.82879593,-13.88528133,-0.05648540,0.05648540,Routine monitoring,Routine monitoring,False
+Gisagara,-24.49991004,-24.54343659,-0.04352655,0.04352655,Environmental monitoring,Environmental monitoring,False
+Huye,-25.13310819,-25.10853644,+0.02457174,0.02457174,Environmental monitoring,Environmental monitoring,False
+Kamonyi,-17.30438771,-17.31449772,-0.01011001,0.01011001,Environmental monitoring,Environmental monitoring,False
+Karongi,-16.90528321,-16.96115103,-0.05586783,0.05586783,Environmental monitoring,Environmental monitoring,False
+Kayonza,-19.69154625,-19.69243584,-0.00088959,0.00088959,Priority field verification,Priority field verification,False
+Kicukiro,-16.47117954,-16.46171142,+0.00946812,0.00946812,Environmental monitoring,Environmental monitoring,False
+Kirehe,-17.24668303,-17.20764944,+0.03903360,0.03903360,Priority field verification,Priority field verification,False
+Muhanga,-13.00679747,-13.04206506,-0.03526760,0.03526760,Investigate crop performance,Investigate crop performance,False
+Musanze,-14.35873478,-14.41372127,-0.05498649,0.05498649,Routine monitoring,Routine monitoring,False
+Ngoma,-15.73251208,-15.73932093,-0.00680885,0.00680885,Environmental monitoring,Environmental monitoring,False
+Ngororero,-9.03185150,-9.01916895,+0.01268256,0.01268256,Investigate crop performance,Investigate crop performance,False
+Nyabihu,-12.22795094,-12.28876107,-0.06081013,0.06081013,Routine monitoring,Routine monitoring,False
+Nyagatare,-18.29621572,-18.23499681,+0.06121891,0.06121891,Environmental monitoring,Environmental monitoring,False
+Nyamagabe,-19.77200418,-19.77350757,-0.00150339,0.00150339,Environmental monitoring,Environmental monitoring,False
+Nyamasheke,-12.49035764,-12.51396838,-0.02361074,0.02361074,Investigate crop performance,Investigate crop performance,False
+Nyanza,-24.64078023,-24.61477287,+0.02600736,0.02600736,Environmental monitoring,Environmental monitoring,False
+Nyarugenge,-15.87277340,-15.83861690,+0.03415650,0.03415650,Environmental monitoring,Environmental monitoring,False
+Nyaruguru,-15.67139056,-15.70744836,-0.03605780,0.03605780,Environmental monitoring,Environmental monitoring,False
+Rubavu,-6.67438395,-6.79977571,-0.12539175,0.12539175,Routine monitoring,Routine monitoring,False
+Ruhango,-18.83519589,-18.85417778,-0.01898189,0.01898189,Priority field verification,Priority field verification,False
+Rulindo,-17.97935021,-18.05777123,-0.07842102,0.07842102,Priority field verification,Priority field verification,False
+Rusizi,-5.77006070,-5.79063265,-0.02057196,0.02057196,Environmental monitoring,Environmental monitoring,False
+Rutsiro,-10.38197872,-10.46690820,-0.08492948,0.08492948,Routine monitoring,Routine monitoring,False
+Rwamagana,-18.39295484,-18.42210801,-0.02915316,0.02915316,Environmental monitoring,Environmental monitoring,False

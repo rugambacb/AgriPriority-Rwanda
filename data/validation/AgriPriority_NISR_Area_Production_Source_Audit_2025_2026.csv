@@ -1,0 +1,421 @@
+﻿district,year,nisr_table,measure,unit,source_value,processed_value,difference,audit_status
+Nyarugenge,2025,7,nisr_physical_cultivated_land_ha_2025,ha,4582.301,4582.301,0.0,PASS
+Gasabo,2025,7,nisr_physical_cultivated_land_ha_2025,ha,17979.9,17979.9,0.0,PASS
+Kicukiro,2025,7,nisr_physical_cultivated_land_ha_2025,ha,4986.311,4986.311,0.0,PASS
+Nyanza,2025,7,nisr_physical_cultivated_land_ha_2025,ha,43603.57,43603.57,0.0,PASS
+Gisagara,2025,7,nisr_physical_cultivated_land_ha_2025,ha,41106.37,41106.37,0.0,PASS
+Nyaruguru,2025,7,nisr_physical_cultivated_land_ha_2025,ha,33334.1719850708,33334.1719850708,0.0,PASS
+Huye,2025,7,nisr_physical_cultivated_land_ha_2025,ha,32220.489999999998,32220.489999999998,0.0,PASS
+Nyamagabe,2025,7,nisr_physical_cultivated_land_ha_2025,ha,41710.31929902344,41710.31929902344,0.0,PASS
+Ruhango,2025,7,nisr_physical_cultivated_land_ha_2025,ha,40316.77,40316.77,0.0,PASS
+Muhanga,2025,7,nisr_physical_cultivated_land_ha_2025,ha,32768.38,32768.38,0.0,PASS
+Kamonyi,2025,7,nisr_physical_cultivated_land_ha_2025,ha,44322.22,44322.22,0.0,PASS
+Karongi,2025,7,nisr_physical_cultivated_land_ha_2025,ha,41718.483112683105,41718.483112683105,0.0,PASS
+Rutsiro,2025,7,nisr_physical_cultivated_land_ha_2025,ha,29968.17043944092,29968.17043944092,0.0,PASS
+Rubavu,2025,7,nisr_physical_cultivated_land_ha_2025,ha,21826.35431080322,21826.35431080322,0.0,PASS
+Nyabihu,2025,7,nisr_physical_cultivated_land_ha_2025,ha,29196.750474609376,29196.750474609376,0.0,PASS
+Ngororero,2025,7,nisr_physical_cultivated_land_ha_2025,ha,36688.258943164066,36688.258943164066,0.0,PASS
+Rusizi,2025,7,nisr_physical_cultivated_land_ha_2025,ha,36884.4247307251,36884.4247307251,0.0,PASS
+Nyamasheke,2025,7,nisr_physical_cultivated_land_ha_2025,ha,39614.727862561034,39614.727862561034,0.0,PASS
+Rulindo,2025,7,nisr_physical_cultivated_land_ha_2025,ha,31444.19240661621,31444.19240661621,0.0,PASS
+Gakenke,2025,7,nisr_physical_cultivated_land_ha_2025,ha,37666.28,37666.28,0.0,PASS
+Musanze,2025,7,nisr_physical_cultivated_land_ha_2025,ha,24996.330618286134,24996.330618286134,0.0,PASS
+Burera,2025,7,nisr_physical_cultivated_land_ha_2025,ha,31905.59,31905.59,0.0,PASS
+Gicumbi,2025,7,nisr_physical_cultivated_land_ha_2025,ha,47418.21036411133,47418.21036411133,0.0,PASS
+Rwamagana,2025,7,nisr_physical_cultivated_land_ha_2025,ha,40191.1,40191.1,0.0,PASS
+Nyagatare,2025,7,nisr_physical_cultivated_land_ha_2025,ha,86736.79,86736.79,0.0,PASS
+Gatsibo,2025,7,nisr_physical_cultivated_land_ha_2025,ha,67970.09,67970.09,0.0,PASS
+Kayonza,2025,7,nisr_physical_cultivated_land_ha_2025,ha,61476.11,61476.11,0.0,PASS
+Kirehe,2025,7,nisr_physical_cultivated_land_ha_2025,ha,67536.82,67536.82,0.0,PASS
+Ngoma,2025,7,nisr_physical_cultivated_land_ha_2025,ha,51937.93,51937.93,0.0,PASS
+Bugesera,2025,7,nisr_physical_cultivated_land_ha_2025,ha,63590.22,63590.22,0.0,PASS
+Nyarugenge,2025,9,nisr_maize_cultivated_area_ha_2025,ha,428.9898,428.9898,0.0,PASS
+Gasabo,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1224.411,1224.411,0.0,PASS
+Kicukiro,2025,9,nisr_maize_cultivated_area_ha_2025,ha,491.1594,491.1594,0.0,PASS
+Nyanza,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2673.187,2673.187,0.0,PASS
+Gisagara,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2396.847,2396.847,0.0,PASS
+Nyaruguru,2025,9,nisr_maize_cultivated_area_ha_2025,ha,247.8005,247.8005,0.0,PASS
+Huye,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1028.759,1028.759,0.0,PASS
+Nyamagabe,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1014.842,1014.842,0.0,PASS
+Ruhango,2025,9,nisr_maize_cultivated_area_ha_2025,ha,946.2968,946.2968,0.0,PASS
+Muhanga,2025,9,nisr_maize_cultivated_area_ha_2025,ha,913.8115,913.8115,0.0,PASS
+Kamonyi,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2019.925,2019.925,0.0,PASS
+Karongi,2025,9,nisr_maize_cultivated_area_ha_2025,ha,690.702,690.702,0.0,PASS
+Rutsiro,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1574.971,1574.971,0.0,PASS
+Rubavu,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1769.746,1769.746,0.0,PASS
+Nyabihu,2025,9,nisr_maize_cultivated_area_ha_2025,ha,4217.603,4217.603,0.0,PASS
+Ngororero,2025,9,nisr_maize_cultivated_area_ha_2025,ha,3721.33,3721.33,0.0,PASS
+Rusizi,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1040.832,1040.832,0.0,PASS
+Nyamasheke,2025,9,nisr_maize_cultivated_area_ha_2025,ha,521.4745,521.4745,0.0,PASS
+Rulindo,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1196.602,1196.602,0.0,PASS
+Gakenke,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1467.058,1467.058,0.0,PASS
+Musanze,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2427.169,2427.169,0.0,PASS
+Burera,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2429.937,2429.937,0.0,PASS
+Gicumbi,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2248.389,2248.389,0.0,PASS
+Rwamagana,2025,9,nisr_maize_cultivated_area_ha_2025,ha,4245.361,4245.361,0.0,PASS
+Nyagatare,2025,9,nisr_maize_cultivated_area_ha_2025,ha,25702.32,25702.32,0.0,PASS
+Gatsibo,2025,9,nisr_maize_cultivated_area_ha_2025,ha,9350.443,9350.443,0.0,PASS
+Kayonza,2025,9,nisr_maize_cultivated_area_ha_2025,ha,6412.962,6412.962,0.0,PASS
+Kirehe,2025,9,nisr_maize_cultivated_area_ha_2025,ha,2339.115,2339.115,0.0,PASS
+Ngoma,2025,9,nisr_maize_cultivated_area_ha_2025,ha,1827.125,1827.125,0.0,PASS
+Bugesera,2025,9,nisr_maize_cultivated_area_ha_2025,ha,6435.815,6435.815,0.0,PASS
+Nyarugenge,2025,9,nisr_bean_cultivated_area_ha_2025,ha,1564.49736,1564.49736,0.0,PASS
+Gasabo,2025,9,nisr_bean_cultivated_area_ha_2025,ha,4210.3319,4210.3319,0.0,PASS
+Kicukiro,2025,9,nisr_bean_cultivated_area_ha_2025,ha,1542.3876,1542.3876,0.0,PASS
+Nyanza,2025,9,nisr_bean_cultivated_area_ha_2025,ha,13053.796,13053.796,0.0,PASS
+Gisagara,2025,9,nisr_bean_cultivated_area_ha_2025,ha,13718.473999999998,13718.473999999998,0.0,PASS
+Nyaruguru,2025,9,nisr_bean_cultivated_area_ha_2025,ha,7756.1511,7756.1511,0.0,PASS
+Huye,2025,9,nisr_bean_cultivated_area_ha_2025,ha,9294.663,9294.663,0.0,PASS
+Nyamagabe,2025,9,nisr_bean_cultivated_area_ha_2025,ha,7408.5696,7408.5696,0.0,PASS
+Ruhango,2025,9,nisr_bean_cultivated_area_ha_2025,ha,11596.49,11596.49,0.0,PASS
+Muhanga,2025,9,nisr_bean_cultivated_area_ha_2025,ha,6550.382,6550.382,0.0,PASS
+Kamonyi,2025,9,nisr_bean_cultivated_area_ha_2025,ha,10612.51,10612.51,0.0,PASS
+Karongi,2025,9,nisr_bean_cultivated_area_ha_2025,ha,7862.814,7862.814,0.0,PASS
+Rutsiro,2025,9,nisr_bean_cultivated_area_ha_2025,ha,5614.5799,5614.5799,0.0,PASS
+Rubavu,2025,9,nisr_bean_cultivated_area_ha_2025,ha,5222.0291,5222.0291,0.0,PASS
+Nyabihu,2025,9,nisr_bean_cultivated_area_ha_2025,ha,2958.6701900000003,2958.6701900000003,0.0,PASS
+Ngororero,2025,9,nisr_bean_cultivated_area_ha_2025,ha,5726.3122,5726.3122,0.0,PASS
+Rusizi,2025,9,nisr_bean_cultivated_area_ha_2025,ha,11174.444,11174.444,0.0,PASS
+Nyamasheke,2025,9,nisr_bean_cultivated_area_ha_2025,ha,7273.0599999999995,7273.0599999999995,0.0,PASS
+Rulindo,2025,9,nisr_bean_cultivated_area_ha_2025,ha,8905.623,8905.623,0.0,PASS
+Gakenke,2025,9,nisr_bean_cultivated_area_ha_2025,ha,11527.278,11527.278,0.0,PASS
+Musanze,2025,9,nisr_bean_cultivated_area_ha_2025,ha,7702.6629,7702.6629,0.0,PASS
+Burera,2025,9,nisr_bean_cultivated_area_ha_2025,ha,10604.332199999999,10604.332199999999,0.0,PASS
+Gicumbi,2025,9,nisr_bean_cultivated_area_ha_2025,ha,14979.377,14979.377,0.0,PASS
+Rwamagana,2025,9,nisr_bean_cultivated_area_ha_2025,ha,12640.2937,12640.2937,0.0,PASS
+Nyagatare,2025,9,nisr_bean_cultivated_area_ha_2025,ha,29777.611,29777.611,0.0,PASS
+Gatsibo,2025,9,nisr_bean_cultivated_area_ha_2025,ha,19138.426,19138.426,0.0,PASS
+Kayonza,2025,9,nisr_bean_cultivated_area_ha_2025,ha,20996.9443,20996.9443,0.0,PASS
+Kirehe,2025,9,nisr_bean_cultivated_area_ha_2025,ha,23626.242000000002,23626.242000000002,0.0,PASS
+Ngoma,2025,9,nisr_bean_cultivated_area_ha_2025,ha,19954.608,19954.608,0.0,PASS
+Bugesera,2025,9,nisr_bean_cultivated_area_ha_2025,ha,22058.2176,22058.2176,0.0,PASS
+Nyarugenge,2025,10,nisr_maize_harvested_area_ha_2025,ha,428.9898,428.9898,0.0,PASS
+Gasabo,2025,10,nisr_maize_harvested_area_ha_2025,ha,1223.97789,1223.97789,0.0,PASS
+Kicukiro,2025,10,nisr_maize_harvested_area_ha_2025,ha,491.1594,491.1594,0.0,PASS
+Nyanza,2025,10,nisr_maize_harvested_area_ha_2025,ha,2673.187,2673.187,0.0,PASS
+Gisagara,2025,10,nisr_maize_harvested_area_ha_2025,ha,2397.0703,2397.0703,0.0,PASS
+Nyaruguru,2025,10,nisr_maize_harvested_area_ha_2025,ha,238.080522,238.080522,0.0,PASS
+Huye,2025,10,nisr_maize_harvested_area_ha_2025,ha,1028.87765,1028.87765,0.0,PASS
+Nyamagabe,2025,10,nisr_maize_harvested_area_ha_2025,ha,1008.941,1008.941,0.0,PASS
+Ruhango,2025,10,nisr_maize_harvested_area_ha_2025,ha,946.2968,946.2968,0.0,PASS
+Muhanga,2025,10,nisr_maize_harvested_area_ha_2025,ha,913.81152,913.81152,0.0,PASS
+Kamonyi,2025,10,nisr_maize_harvested_area_ha_2025,ha,2020.00885,2020.00885,0.0,PASS
+Karongi,2025,10,nisr_maize_harvested_area_ha_2025,ha,690.702,690.702,0.0,PASS
+Rutsiro,2025,10,nisr_maize_harvested_area_ha_2025,ha,1574.971,1574.971,0.0,PASS
+Rubavu,2025,10,nisr_maize_harvested_area_ha_2025,ha,1765.6129649999998,1765.6129649999998,0.0,PASS
+Nyabihu,2025,10,nisr_maize_harvested_area_ha_2025,ha,4203.351,4203.351,0.0,PASS
+Ngororero,2025,10,nisr_maize_harvested_area_ha_2025,ha,3721.33,3721.33,0.0,PASS
+Rusizi,2025,10,nisr_maize_harvested_area_ha_2025,ha,1040.832528,1040.832528,0.0,PASS
+Nyamasheke,2025,10,nisr_maize_harvested_area_ha_2025,ha,521.4745,521.4745,0.0,PASS
+Rulindo,2025,10,nisr_maize_harvested_area_ha_2025,ha,1196.602,1196.602,0.0,PASS
+Gakenke,2025,10,nisr_maize_harvested_area_ha_2025,ha,1467.058,1467.058,0.0,PASS
+Musanze,2025,10,nisr_maize_harvested_area_ha_2025,ha,2427.169,2427.169,0.0,PASS
+Burera,2025,10,nisr_maize_harvested_area_ha_2025,ha,2429.937,2429.937,0.0,PASS
+Gicumbi,2025,10,nisr_maize_harvested_area_ha_2025,ha,2248.389,2248.389,0.0,PASS
+Rwamagana,2025,10,nisr_maize_harvested_area_ha_2025,ha,4241.613189,4241.613189,0.0,PASS
+Nyagatare,2025,10,nisr_maize_harvested_area_ha_2025,ha,25716.861699999998,25716.861699999998,0.0,PASS
+Gatsibo,2025,10,nisr_maize_harvested_area_ha_2025,ha,9349.9523,9349.9523,0.0,PASS
+Kayonza,2025,10,nisr_maize_harvested_area_ha_2025,ha,6412.8292,6412.8292,0.0,PASS
+Kirehe,2025,10,nisr_maize_harvested_area_ha_2025,ha,2336.6302,2336.6302,0.0,PASS
+Ngoma,2025,10,nisr_maize_harvested_area_ha_2025,ha,1827.9484850000001,1827.9484850000001,0.0,PASS
+Bugesera,2025,10,nisr_maize_harvested_area_ha_2025,ha,6435.1663,6435.1663,0.0,PASS
+Nyarugenge,2025,10,nisr_bean_harvested_area_ha_2025,ha,1564.497359,1564.497359,0.0,PASS
+Gasabo,2025,10,nisr_bean_harvested_area_ha_2025,ha,4210.965843999999,4210.965843999999,0.0,PASS
+Kicukiro,2025,10,nisr_bean_harvested_area_ha_2025,ha,1544.922102,1544.922102,0.0,PASS
+Nyanza,2025,10,nisr_bean_harvested_area_ha_2025,ha,13054.2834518,13054.2834518,0.0,PASS
+Gisagara,2025,10,nisr_bean_harvested_area_ha_2025,ha,13718.494998999999,13718.494998999999,0.0,PASS
+Nyaruguru,2025,10,nisr_bean_harvested_area_ha_2025,ha,7756.177178,7756.177178,0.0,PASS
+Huye,2025,10,nisr_bean_harvested_area_ha_2025,ha,9294.6629982,9294.6629982,0.0,PASS
+Nyamagabe,2025,10,nisr_bean_harvested_area_ha_2025,ha,7408.5698409999995,7408.5698409999995,0.0,PASS
+Ruhango,2025,10,nisr_bean_harvested_area_ha_2025,ha,11596.508843999998,11596.508843999998,0.0,PASS
+Muhanga,2025,10,nisr_bean_harvested_area_ha_2025,ha,6550.382517,6550.382517,0.0,PASS
+Kamonyi,2025,10,nisr_bean_harvested_area_ha_2025,ha,10612.509670000001,10612.509670000001,0.0,PASS
+Karongi,2025,10,nisr_bean_harvested_area_ha_2025,ha,7862.814,7862.814,0.0,PASS
+Rutsiro,2025,10,nisr_bean_harvested_area_ha_2025,ha,5614.5799,5614.5799,0.0,PASS
+Rubavu,2025,10,nisr_bean_harvested_area_ha_2025,ha,5222.0291,5222.0291,0.0,PASS
+Nyabihu,2025,10,nisr_bean_harvested_area_ha_2025,ha,2932.5411900000004,2932.5411900000004,0.0,PASS
+Ngororero,2025,10,nisr_bean_harvested_area_ha_2025,ha,5726.3122,5726.3122,0.0,PASS
+Rusizi,2025,10,nisr_bean_harvested_area_ha_2025,ha,11174.81773,11174.81773,0.0,PASS
+Nyamasheke,2025,10,nisr_bean_harvested_area_ha_2025,ha,7273.0599999999995,7273.0599999999995,0.0,PASS
+Rulindo,2025,10,nisr_bean_harvested_area_ha_2025,ha,8905.653028,8905.653028,0.0,PASS
+Gakenke,2025,10,nisr_bean_harvested_area_ha_2025,ha,11527.278,11527.278,0.0,PASS
+Musanze,2025,10,nisr_bean_harvested_area_ha_2025,ha,7702.387900000001,7702.387900000001,0.0,PASS
+Burera,2025,10,nisr_bean_harvested_area_ha_2025,ha,10604.332199999999,10604.332199999999,0.0,PASS
+Gicumbi,2025,10,nisr_bean_harvested_area_ha_2025,ha,14979.369971,14979.369971,0.0,PASS
+Rwamagana,2025,10,nisr_bean_harvested_area_ha_2025,ha,12634.983660000002,12634.983660000002,0.0,PASS
+Nyagatare,2025,10,nisr_bean_harvested_area_ha_2025,ha,29776.1034,29776.1034,0.0,PASS
+Gatsibo,2025,10,nisr_bean_harvested_area_ha_2025,ha,19138.116255999998,19138.116255999998,0.0,PASS
+Kayonza,2025,10,nisr_bean_harvested_area_ha_2025,ha,20994.10893,20994.10893,0.0,PASS
+Kirehe,2025,10,nisr_bean_harvested_area_ha_2025,ha,23629.62141,23629.62141,0.0,PASS
+Ngoma,2025,10,nisr_bean_harvested_area_ha_2025,ha,19919.07355,19919.07355,0.0,PASS
+Bugesera,2025,10,nisr_bean_harvested_area_ha_2025,ha,22058.430699999997,22058.430699999997,0.0,PASS
+Nyarugenge,2025,13,nisr_maize_production_mt_2025,metric tonnes,402.76475264742,402.76475264742,0.0,PASS
+Gasabo,2025,13,nisr_maize_production_mt_2025,metric tonnes,1542.4220175199998,1542.4220175199998,0.0,PASS
+Kicukiro,2025,13,nisr_maize_production_mt_2025,metric tonnes,368.21768351352,368.21768351352,0.0,PASS
+Nyanza,2025,13,nisr_maize_production_mt_2025,metric tonnes,3364.801960201,3364.801960201,0.0,PASS
+Gisagara,2025,13,nisr_maize_production_mt_2025,metric tonnes,2342.5420882060002,2342.5420882060002,0.0,PASS
+Nyaruguru,2025,13,nisr_maize_production_mt_2025,metric tonnes,270.2267356486,270.2267356486,0.0,PASS
+Huye,2025,13,nisr_maize_production_mt_2025,metric tonnes,1112.24172513714,1112.24172513714,0.0,PASS
+Nyamagabe,2025,13,nisr_maize_production_mt_2025,metric tonnes,1172.887858854,1172.887858854,0.0,PASS
+Ruhango,2025,13,nisr_maize_production_mt_2025,metric tonnes,830.0343966332799,830.0343966332799,0.0,PASS
+Muhanga,2025,13,nisr_maize_production_mt_2025,metric tonnes,944.6466623657001,944.6466623657001,0.0,PASS
+Kamonyi,2025,13,nisr_maize_production_mt_2025,metric tonnes,2355.775336416,2355.775336416,0.0,PASS
+Karongi,2025,13,nisr_maize_production_mt_2025,metric tonnes,742.5460921199999,742.5460921199999,0.0,PASS
+Rutsiro,2025,13,nisr_maize_production_mt_2025,metric tonnes,1762.1122041619997,1762.1122041619997,0.0,PASS
+Rubavu,2025,13,nisr_maize_production_mt_2025,metric tonnes,2495.2963878600003,2495.2963878600003,0.0,PASS
+Nyabihu,2025,13,nisr_maize_production_mt_2025,metric tonnes,5612.9405544989995,5612.9405544989995,0.0,PASS
+Ngororero,2025,13,nisr_maize_production_mt_2025,metric tonnes,4321.12652674,4321.12652674,0.0,PASS
+Rusizi,2025,13,nisr_maize_production_mt_2025,metric tonnes,1023.0689787914,1023.0689787914,0.0,PASS
+Nyamasheke,2025,13,nisr_maize_production_mt_2025,metric tonnes,546.0818387060001,546.0818387060001,0.0,PASS
+Rulindo,2025,13,nisr_maize_production_mt_2025,metric tonnes,1210.182236098,1210.182236098,0.0,PASS
+Gakenke,2025,13,nisr_maize_production_mt_2025,metric tonnes,1420.2810023758,1420.2810023758,0.0,PASS
+Musanze,2025,13,nisr_maize_production_mt_2025,metric tonnes,3647.369962694,3647.369962694,0.0,PASS
+Burera,2025,13,nisr_maize_production_mt_2025,metric tonnes,3171.0556353149996,3171.0556353149996,0.0,PASS
+Gicumbi,2025,13,nisr_maize_production_mt_2025,metric tonnes,2392.7513125230003,2392.7513125230003,0.0,PASS
+Rwamagana,2025,13,nisr_maize_production_mt_2025,metric tonnes,3488.2843474723995,3488.2843474723995,0.0,PASS
+Nyagatare,2025,13,nisr_maize_production_mt_2025,metric tonnes,39346.58628794,39346.58628794,0.0,PASS
+Gatsibo,2025,13,nisr_maize_production_mt_2025,metric tonnes,11353.24502209,11353.24502209,0.0,PASS
+Kayonza,2025,13,nisr_maize_production_mt_2025,metric tonnes,7072.066742769999,7072.066742769999,0.0,PASS
+Kirehe,2025,13,nisr_maize_production_mt_2025,metric tonnes,5443.1356723852,5443.1356723852,0.0,PASS
+Ngoma,2025,13,nisr_maize_production_mt_2025,metric tonnes,1473.0144711634,1473.0144711634,0.0,PASS
+Bugesera,2025,13,nisr_maize_production_mt_2025,metric tonnes,6482.9137648684,6482.9137648684,0.0,PASS
+Nyarugenge,2025,13,nisr_bean_production_mt_2025,metric tonnes,911.7428202347902,911.7428202347902,0.0,PASS
+Gasabo,2025,13,nisr_bean_production_mt_2025,metric tonnes,2764.84059806593,2764.84059806593,0.0,PASS
+Kicukiro,2025,13,nisr_bean_production_mt_2025,metric tonnes,966.77691114624,966.77691114624,0.0,PASS
+Nyanza,2025,13,nisr_bean_production_mt_2025,metric tonnes,7744.0530531634,7744.0530531634,0.0,PASS
+Gisagara,2025,13,nisr_bean_production_mt_2025,metric tonnes,8695.013948795893,8695.013948795893,0.0,PASS
+Nyaruguru,2025,13,nisr_bean_production_mt_2025,metric tonnes,5924.962493234831,5924.962493234831,0.0,PASS
+Huye,2025,13,nisr_bean_production_mt_2025,metric tonnes,5656.275858452134,5656.275858452134,0.0,PASS
+Nyamagabe,2025,13,nisr_bean_production_mt_2025,metric tonnes,4736.46995110006,4736.46995110006,0.0,PASS
+Ruhango,2025,13,nisr_bean_production_mt_2025,metric tonnes,6714.6222521728,6714.6222521728,0.0,PASS
+Muhanga,2025,13,nisr_bean_production_mt_2025,metric tonnes,4251.16419478,4251.16419478,0.0,PASS
+Kamonyi,2025,13,nisr_bean_production_mt_2025,metric tonnes,5725.181759861201,5725.181759861201,0.0,PASS
+Karongi,2025,13,nisr_bean_production_mt_2025,metric tonnes,7443.849723030699,7443.849723030699,0.0,PASS
+Rutsiro,2025,13,nisr_bean_production_mt_2025,metric tonnes,4748.8949116227395,4748.8949116227395,0.0,PASS
+Rubavu,2025,13,nisr_bean_production_mt_2025,metric tonnes,4096.89210992225,4096.89210992225,0.0,PASS
+Nyabihu,2025,13,nisr_bean_production_mt_2025,metric tonnes,2996.449641540556,2996.449641540556,0.0,PASS
+Ngororero,2025,13,nisr_bean_production_mt_2025,metric tonnes,5521.66978526896,5521.66978526896,0.0,PASS
+Rusizi,2025,13,nisr_bean_production_mt_2025,metric tonnes,8704.038423135698,8704.038423135698,0.0,PASS
+Nyamasheke,2025,13,nisr_bean_production_mt_2025,metric tonnes,5692.7803839789,5692.7803839789,0.0,PASS
+Rulindo,2025,13,nisr_bean_production_mt_2025,metric tonnes,7613.5435730702,7613.5435730702,0.0,PASS
+Gakenke,2025,13,nisr_bean_production_mt_2025,metric tonnes,9989.7353961888,9989.7353961888,0.0,PASS
+Musanze,2025,13,nisr_bean_production_mt_2025,metric tonnes,8316.779290153168,8316.779290153168,0.0,PASS
+Burera,2025,13,nisr_bean_production_mt_2025,metric tonnes,11778.4673946216,11778.4673946216,0.0,PASS
+Gicumbi,2025,13,nisr_bean_production_mt_2025,metric tonnes,12960.113921173901,12960.113921173901,0.0,PASS
+Rwamagana,2025,13,nisr_bean_production_mt_2025,metric tonnes,6869.8596237048305,6869.8596237048305,0.0,PASS
+Nyagatare,2025,13,nisr_bean_production_mt_2025,metric tonnes,22202.5812653254,22202.5812653254,0.0,PASS
+Gatsibo,2025,13,nisr_bean_production_mt_2025,metric tonnes,12417.623069857525,12417.623069857525,0.0,PASS
+Kayonza,2025,13,nisr_bean_production_mt_2025,metric tonnes,12053.258349278129,12053.258349278129,0.0,PASS
+Kirehe,2025,13,nisr_bean_production_mt_2025,metric tonnes,15483.5292262971,15483.5292262971,0.0,PASS
+Ngoma,2025,13,nisr_bean_production_mt_2025,metric tonnes,14594.442749491198,14594.442749491198,0.0,PASS
+Bugesera,2025,13,nisr_bean_production_mt_2025,metric tonnes,13145.011904594421,13145.011904594421,0.0,PASS
+Nyarugenge,2026,7,nisr_physical_cultivated_land_ha_2026,ha,6683.858,6683.858,0.0,PASS
+Gasabo,2026,7,nisr_physical_cultivated_land_ha_2026,ha,18363.47,18363.47,0.0,PASS
+Kicukiro,2026,7,nisr_physical_cultivated_land_ha_2026,ha,4466.63,4466.63,0.0,PASS
+Nyanza,2026,7,nisr_physical_cultivated_land_ha_2026,ha,42102.31,42102.31,0.0,PASS
+Gisagara,2026,7,nisr_physical_cultivated_land_ha_2026,ha,40516.31,40516.31,0.0,PASS
+Nyaruguru,2026,7,nisr_physical_cultivated_land_ha_2026,ha,30668.57,30668.57,0.0,PASS
+Huye,2026,7,nisr_physical_cultivated_land_ha_2026,ha,33032.4,33032.4,0.0,PASS
+Nyamagabe,2026,7,nisr_physical_cultivated_land_ha_2026,ha,40831.82,40831.82,0.0,PASS
+Ruhango,2026,7,nisr_physical_cultivated_land_ha_2026,ha,39139.98,39139.98,0.0,PASS
+Muhanga,2026,7,nisr_physical_cultivated_land_ha_2026,ha,35341.96,35341.96,0.0,PASS
+Kamonyi,2026,7,nisr_physical_cultivated_land_ha_2026,ha,42763.37,42763.37,0.0,PASS
+Karongi,2026,7,nisr_physical_cultivated_land_ha_2026,ha,37619.4,37619.4,0.0,PASS
+Rutsiro,2026,7,nisr_physical_cultivated_land_ha_2026,ha,28925.68,28925.68,0.0,PASS
+Rubavu,2026,7,nisr_physical_cultivated_land_ha_2026,ha,21482.03,21482.03,0.0,PASS
+Nyabihu,2026,7,nisr_physical_cultivated_land_ha_2026,ha,24207.53,24207.53,0.0,PASS
+Ngororero,2026,7,nisr_physical_cultivated_land_ha_2026,ha,34612.84,34612.84,0.0,PASS
+Rusizi,2026,7,nisr_physical_cultivated_land_ha_2026,ha,35828.57,35828.57,0.0,PASS
+Nyamasheke,2026,7,nisr_physical_cultivated_land_ha_2026,ha,33925.13,33925.13,0.0,PASS
+Rulindo,2026,7,nisr_physical_cultivated_land_ha_2026,ha,28930.95,28930.95,0.0,PASS
+Gakenke,2026,7,nisr_physical_cultivated_land_ha_2026,ha,38503.65,38503.65,0.0,PASS
+Musanze,2026,7,nisr_physical_cultivated_land_ha_2026,ha,24617.68,24617.68,0.0,PASS
+Burera,2026,7,nisr_physical_cultivated_land_ha_2026,ha,30112.42,30112.42,0.0,PASS
+Gicumbi,2026,7,nisr_physical_cultivated_land_ha_2026,ha,46036.78,46036.78,0.0,PASS
+Rwamagana,2026,7,nisr_physical_cultivated_land_ha_2026,ha,36834.92,36834.92,0.0,PASS
+Nyagatare,2026,7,nisr_physical_cultivated_land_ha_2026,ha,91808.87,91808.87,0.0,PASS
+Gatsibo,2026,7,nisr_physical_cultivated_land_ha_2026,ha,67641.85,67641.85,0.0,PASS
+Kayonza,2026,7,nisr_physical_cultivated_land_ha_2026,ha,62956.92,62956.92,0.0,PASS
+Kirehe,2026,7,nisr_physical_cultivated_land_ha_2026,ha,69467.52,69467.52,0.0,PASS
+Ngoma,2026,7,nisr_physical_cultivated_land_ha_2026,ha,50477.87,50477.87,0.0,PASS
+Bugesera,2026,7,nisr_physical_cultivated_land_ha_2026,ha,62440.99,62440.99,0.0,PASS
+Nyarugenge,2026,9,nisr_maize_cultivated_area_ha_2026,ha,574.4233,574.4233,0.0,PASS
+Gasabo,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1274.728,1274.728,0.0,PASS
+Kicukiro,2026,9,nisr_maize_cultivated_area_ha_2026,ha,497.9247,497.9247,0.0,PASS
+Nyanza,2026,9,nisr_maize_cultivated_area_ha_2026,ha,2962.119,2962.119,0.0,PASS
+Gisagara,2026,9,nisr_maize_cultivated_area_ha_2026,ha,2434.511,2434.511,0.0,PASS
+Nyaruguru,2026,9,nisr_maize_cultivated_area_ha_2026,ha,263.2013,263.2013,0.0,PASS
+Huye,2026,9,nisr_maize_cultivated_area_ha_2026,ha,977.4691,977.4691,0.0,PASS
+Nyamagabe,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1092.237,1092.237,0.0,PASS
+Ruhango,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1043.374,1043.374,0.0,PASS
+Muhanga,2026,9,nisr_maize_cultivated_area_ha_2026,ha,901.8631,901.8631,0.0,PASS
+Kamonyi,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1963.406,1963.406,0.0,PASS
+Karongi,2026,9,nisr_maize_cultivated_area_ha_2026,ha,705.6621,705.6621,0.0,PASS
+Rutsiro,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1582.98,1582.98,0.0,PASS
+Rubavu,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1492.053,1492.053,0.0,PASS
+Nyabihu,2026,9,nisr_maize_cultivated_area_ha_2026,ha,4287.826,4287.826,0.0,PASS
+Ngororero,2026,9,nisr_maize_cultivated_area_ha_2026,ha,4004.69,4004.69,0.0,PASS
+Rusizi,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1142.294,1142.294,0.0,PASS
+Nyamasheke,2026,9,nisr_maize_cultivated_area_ha_2026,ha,484.9035,484.9035,0.0,PASS
+Rulindo,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1193.126,1193.126,0.0,PASS
+Gakenke,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1505.066,1505.066,0.0,PASS
+Musanze,2026,9,nisr_maize_cultivated_area_ha_2026,ha,2137.166,2137.166,0.0,PASS
+Burera,2026,9,nisr_maize_cultivated_area_ha_2026,ha,2468.997,2468.997,0.0,PASS
+Gicumbi,2026,9,nisr_maize_cultivated_area_ha_2026,ha,2330.947,2330.947,0.0,PASS
+Rwamagana,2026,9,nisr_maize_cultivated_area_ha_2026,ha,3953.258,3953.258,0.0,PASS
+Nyagatare,2026,9,nisr_maize_cultivated_area_ha_2026,ha,26477.53,26477.53,0.0,PASS
+Gatsibo,2026,9,nisr_maize_cultivated_area_ha_2026,ha,9307.352,9307.352,0.0,PASS
+Kayonza,2026,9,nisr_maize_cultivated_area_ha_2026,ha,6908.459,6908.459,0.0,PASS
+Kirehe,2026,9,nisr_maize_cultivated_area_ha_2026,ha,2217.642,2217.642,0.0,PASS
+Ngoma,2026,9,nisr_maize_cultivated_area_ha_2026,ha,1948.855,1948.855,0.0,PASS
+Bugesera,2026,9,nisr_maize_cultivated_area_ha_2026,ha,6689.332,6689.332,0.0,PASS
+Nyarugenge,2026,9,nisr_bean_cultivated_area_ha_2026,ha,2166.426,2166.426,0.0,PASS
+Gasabo,2026,9,nisr_bean_cultivated_area_ha_2026,ha,3828.4329,3828.4329,0.0,PASS
+Kicukiro,2026,9,nisr_bean_cultivated_area_ha_2026,ha,1345.715,1345.715,0.0,PASS
+Nyanza,2026,9,nisr_bean_cultivated_area_ha_2026,ha,14135.135,14135.135,0.0,PASS
+Gisagara,2026,9,nisr_bean_cultivated_area_ha_2026,ha,14325.867,14325.867,0.0,PASS
+Nyaruguru,2026,9,nisr_bean_cultivated_area_ha_2026,ha,8229.319599999999,8229.319599999999,0.0,PASS
+Huye,2026,9,nisr_bean_cultivated_area_ha_2026,ha,9787.794,9787.794,0.0,PASS
+Nyamagabe,2026,9,nisr_bean_cultivated_area_ha_2026,ha,8046.4252,8046.4252,0.0,PASS
+Ruhango,2026,9,nisr_bean_cultivated_area_ha_2026,ha,11267.872,11267.872,0.0,PASS
+Muhanga,2026,9,nisr_bean_cultivated_area_ha_2026,ha,6899.825,6899.825,0.0,PASS
+Kamonyi,2026,9,nisr_bean_cultivated_area_ha_2026,ha,10928.417,10928.417,0.0,PASS
+Karongi,2026,9,nisr_bean_cultivated_area_ha_2026,ha,8452.392,8452.392,0.0,PASS
+Rutsiro,2026,9,nisr_bean_cultivated_area_ha_2026,ha,5725.2791,5725.2791,0.0,PASS
+Rubavu,2026,9,nisr_bean_cultivated_area_ha_2026,ha,5021.5566,5021.5566,0.0,PASS
+Nyabihu,2026,9,nisr_bean_cultivated_area_ha_2026,ha,2740.9284700000003,2740.9284700000003,0.0,PASS
+Ngororero,2026,9,nisr_bean_cultivated_area_ha_2026,ha,6298.689399999999,6298.689399999999,0.0,PASS
+Rusizi,2026,9,nisr_bean_cultivated_area_ha_2026,ha,10564.806,10564.806,0.0,PASS
+Nyamasheke,2026,9,nisr_bean_cultivated_area_ha_2026,ha,7636.08,7636.08,0.0,PASS
+Rulindo,2026,9,nisr_bean_cultivated_area_ha_2026,ha,7801.9220000000005,7801.9220000000005,0.0,PASS
+Gakenke,2026,9,nisr_bean_cultivated_area_ha_2026,ha,11328.3963,11328.3963,0.0,PASS
+Musanze,2026,9,nisr_bean_cultivated_area_ha_2026,ha,7189.6195,7189.6195,0.0,PASS
+Burera,2026,9,nisr_bean_cultivated_area_ha_2026,ha,9947.365399999999,9947.365399999999,0.0,PASS
+Gicumbi,2026,9,nisr_bean_cultivated_area_ha_2026,ha,13781.28,13781.28,0.0,PASS
+Rwamagana,2026,9,nisr_bean_cultivated_area_ha_2026,ha,12378.4376,12378.4376,0.0,PASS
+Nyagatare,2026,9,nisr_bean_cultivated_area_ha_2026,ha,29337.968,29337.968,0.0,PASS
+Gatsibo,2026,9,nisr_bean_cultivated_area_ha_2026,ha,18859.438000000002,18859.438000000002,0.0,PASS
+Kayonza,2026,9,nisr_bean_cultivated_area_ha_2026,ha,20927.059633246612,20927.059633246612,0.0,PASS
+Kirehe,2026,9,nisr_bean_cultivated_area_ha_2026,ha,23349.816,23349.816,0.0,PASS
+Ngoma,2026,9,nisr_bean_cultivated_area_ha_2026,ha,19293.139,19293.139,0.0,PASS
+Bugesera,2026,9,nisr_bean_cultivated_area_ha_2026,ha,22139.487,22139.487,0.0,PASS
+Nyarugenge,2026,10,nisr_maize_harvested_area_ha_2026,ha,574.4233,574.4233,0.0,PASS
+Gasabo,2026,10,nisr_maize_harvested_area_ha_2026,ha,1274.728211109817,1274.728211109817,0.0,PASS
+Kicukiro,2026,10,nisr_maize_harvested_area_ha_2026,ha,497.9247,497.9247,0.0,PASS
+Nyanza,2026,10,nisr_maize_harvested_area_ha_2026,ha,2962.119585175812,2962.119585175812,0.0,PASS
+Gisagara,2026,10,nisr_maize_harvested_area_ha_2026,ha,2434.510759759903,2434.510759759903,0.0,PASS
+Nyaruguru,2026,10,nisr_maize_harvested_area_ha_2026,ha,263.2013,263.2013,0.0,PASS
+Huye,2026,10,nisr_maize_harvested_area_ha_2026,ha,977.4690932170391,977.4690932170391,0.0,PASS
+Nyamagabe,2026,10,nisr_maize_harvested_area_ha_2026,ha,1092.2367933351397,1092.2367933351397,0.0,PASS
+Ruhango,2026,10,nisr_maize_harvested_area_ha_2026,ha,1043.3741687525392,1043.3741687525392,0.0,PASS
+Muhanga,2026,10,nisr_maize_harvested_area_ha_2026,ha,901.8630810430408,901.8630810430408,0.0,PASS
+Kamonyi,2026,10,nisr_maize_harvested_area_ha_2026,ha,1963.4063518997132,1963.4063518997132,0.0,PASS
+Karongi,2026,10,nisr_maize_harvested_area_ha_2026,ha,705.6621,705.6621,0.0,PASS
+Rutsiro,2026,10,nisr_maize_harvested_area_ha_2026,ha,1582.98,1582.98,0.0,PASS
+Rubavu,2026,10,nisr_maize_harvested_area_ha_2026,ha,1492.0529008159638,1492.0529008159638,0.0,PASS
+Nyabihu,2026,10,nisr_maize_harvested_area_ha_2026,ha,4218.939,4218.939,0.0,PASS
+Ngororero,2026,10,nisr_maize_harvested_area_ha_2026,ha,4004.69,4004.69,0.0,PASS
+Rusizi,2026,10,nisr_maize_harvested_area_ha_2026,ha,1142.294,1142.294,0.0,PASS
+Nyamasheke,2026,10,nisr_maize_harvested_area_ha_2026,ha,484.9035,484.9035,0.0,PASS
+Rulindo,2026,10,nisr_maize_harvested_area_ha_2026,ha,1193.126,1193.126,0.0,PASS
+Gakenke,2026,10,nisr_maize_harvested_area_ha_2026,ha,1505.066,1505.066,0.0,PASS
+Musanze,2026,10,nisr_maize_harvested_area_ha_2026,ha,2088.228,2088.228,0.0,PASS
+Burera,2026,10,nisr_maize_harvested_area_ha_2026,ha,2468.997,2468.997,0.0,PASS
+Gicumbi,2026,10,nisr_maize_harvested_area_ha_2026,ha,2330.947,2330.947,0.0,PASS
+Rwamagana,2026,10,nisr_maize_harvested_area_ha_2026,ha,3953.258,3953.258,0.0,PASS
+Nyagatare,2026,10,nisr_maize_harvested_area_ha_2026,ha,26477.527602185233,26477.527602185233,0.0,PASS
+Gatsibo,2026,10,nisr_maize_harvested_area_ha_2026,ha,9307.351654145301,9307.351654145301,0.0,PASS
+Kayonza,2026,10,nisr_maize_harvested_area_ha_2026,ha,6908.45932093215,6908.45932093215,0.0,PASS
+Kirehe,2026,10,nisr_maize_harvested_area_ha_2026,ha,2217.641645224571,2217.641645224571,0.0,PASS
+Ngoma,2026,10,nisr_maize_harvested_area_ha_2026,ha,1948.8553636608124,1948.8553636608124,0.0,PASS
+Bugesera,2026,10,nisr_maize_harvested_area_ha_2026,ha,6689.332648508727,6689.332648508727,0.0,PASS
+Nyarugenge,2026,10,nisr_bean_harvested_area_ha_2026,ha,2166.426,2166.426,0.0,PASS
+Gasabo,2026,10,nisr_bean_harvested_area_ha_2026,ha,3828.433325851666,3828.433325851666,0.0,PASS
+Kicukiro,2026,10,nisr_bean_harvested_area_ha_2026,ha,1345.7152722749931,1345.7152722749931,0.0,PASS
+Nyanza,2026,10,nisr_bean_harvested_area_ha_2026,ha,14135.13395992176,14135.13395992176,0.0,PASS
+Gisagara,2026,10,nisr_bean_harvested_area_ha_2026,ha,14325.866432097639,14325.866432097639,0.0,PASS
+Nyaruguru,2026,10,nisr_bean_harvested_area_ha_2026,ha,8229.319293726914,8229.319293726914,0.0,PASS
+Huye,2026,10,nisr_bean_harvested_area_ha_2026,ha,9787.794193980915,9787.794193980915,0.0,PASS
+Nyamagabe,2026,10,nisr_bean_harvested_area_ha_2026,ha,8046.424975218015,8046.424975218015,0.0,PASS
+Ruhango,2026,10,nisr_bean_harvested_area_ha_2026,ha,11267.871905255946,11267.871905255946,0.0,PASS
+Muhanga,2026,10,nisr_bean_harvested_area_ha_2026,ha,6899.824456249615,6899.824456249615,0.0,PASS
+Kamonyi,2026,10,nisr_bean_harvested_area_ha_2026,ha,10928.416800265313,10928.416800265313,0.0,PASS
+Karongi,2026,10,nisr_bean_harvested_area_ha_2026,ha,8452.392211701324,8452.392211701324,0.0,PASS
+Rutsiro,2026,10,nisr_bean_harvested_area_ha_2026,ha,5725.2794281336,5725.2794281336,0.0,PASS
+Rubavu,2026,10,nisr_bean_harvested_area_ha_2026,ha,5021.556253322485,5021.556253322485,0.0,PASS
+Nyabihu,2026,10,nisr_bean_harvested_area_ha_2026,ha,2740.9283652582285,2740.9283652582285,0.0,PASS
+Ngororero,2026,10,nisr_bean_harvested_area_ha_2026,ha,6298.689760195918,6298.689760195918,0.0,PASS
+Rusizi,2026,10,nisr_bean_harvested_area_ha_2026,ha,10564.80625016554,10564.80625016554,0.0,PASS
+Nyamasheke,2026,10,nisr_bean_harvested_area_ha_2026,ha,7636.080109823065,7636.080109823065,0.0,PASS
+Rulindo,2026,10,nisr_bean_harvested_area_ha_2026,ha,7801.9221984578235,7801.9221984578235,0.0,PASS
+Gakenke,2026,10,nisr_bean_harvested_area_ha_2026,ha,11328.396551031925,11328.396551031925,0.0,PASS
+Musanze,2026,10,nisr_bean_harvested_area_ha_2026,ha,7189.619581559876,7189.619581559876,0.0,PASS
+Burera,2026,10,nisr_bean_harvested_area_ha_2026,ha,9947.36583672575,9947.36583672575,0.0,PASS
+Gicumbi,2026,10,nisr_bean_harvested_area_ha_2026,ha,13781.282699132114,13781.282699132114,0.0,PASS
+Rwamagana,2026,10,nisr_bean_harvested_area_ha_2026,ha,12378.440103043933,12378.440103043933,0.0,PASS
+Nyagatare,2026,10,nisr_bean_harvested_area_ha_2026,ha,29337.965090964866,29337.965090964866,0.0,PASS
+Gatsibo,2026,10,nisr_bean_harvested_area_ha_2026,ha,18859.434954926142,18859.434954926142,0.0,PASS
+Kayonza,2026,10,nisr_bean_harvested_area_ha_2026,ha,20927.059683205902,20927.059683205902,0.0,PASS
+Kirehe,2026,10,nisr_bean_harvested_area_ha_2026,ha,23349.81568951042,23349.81568951042,0.0,PASS
+Ngoma,2026,10,nisr_bean_harvested_area_ha_2026,ha,19293.138450696166,19293.138450696166,0.0,PASS
+Bugesera,2026,10,nisr_bean_harvested_area_ha_2026,ha,22139.487434773448,22139.487434773448,0.0,PASS
+Nyarugenge,2026,13,nisr_maize_production_mt_2026,metric tonnes,685.6021724103074,685.6021724103074,0.0,PASS
+Gasabo,2026,13,nisr_maize_production_mt_2026,metric tonnes,1681.8320981525055,1681.8320981525055,0.0,PASS
+Kicukiro,2026,13,nisr_maize_production_mt_2026,metric tonnes,371.9125668134528,371.9125668134528,0.0,PASS
+Nyanza,2026,13,nisr_maize_production_mt_2026,metric tonnes,3901.220013664805,3901.220013664805,0.0,PASS
+Gisagara,2026,13,nisr_maize_production_mt_2026,metric tonnes,2516.9728434495973,2516.9728434495973,0.0,PASS
+Nyaruguru,2026,13,nisr_maize_production_mt_2026,metric tonnes,299.56843019344024,299.56843019344024,0.0,PASS
+Huye,2026,13,nisr_maize_production_mt_2026,metric tonnes,1170.7230030599653,1170.7230030599653,0.0,PASS
+Nyamagabe,2026,13,nisr_maize_production_mt_2026,metric tonnes,1375.7437538671632,1375.7437538671632,0.0,PASS
+Ruhango,2026,13,nisr_maize_production_mt_2026,metric tonnes,734.3230115494019,734.3230115494019,0.0,PASS
+Muhanga,2026,13,nisr_maize_production_mt_2026,metric tonnes,933.5105338649,933.5105338649,0.0,PASS
+Kamonyi,2026,13,nisr_maize_production_mt_2026,metric tonnes,2269.169253794062,2269.169253794062,0.0,PASS
+Karongi,2026,13,nisr_maize_production_mt_2026,metric tonnes,820.3729668385379,820.3729668385379,0.0,PASS
+Rutsiro,2026,13,nisr_maize_production_mt_2026,metric tonnes,1684.1949021975965,1684.1949021975965,0.0,PASS
+Rubavu,2026,13,nisr_maize_production_mt_2026,metric tonnes,2157.7647398177305,2157.7647398177305,0.0,PASS
+Nyabihu,2026,13,nisr_maize_production_mt_2026,metric tonnes,5921.143009673355,5921.143009673355,0.0,PASS
+Ngororero,2026,13,nisr_maize_production_mt_2026,metric tonnes,4739.703338964893,4739.703338964893,0.0,PASS
+Rusizi,2026,13,nisr_maize_production_mt_2026,metric tonnes,1154.2054576392088,1154.2054576392088,0.0,PASS
+Nyamasheke,2026,13,nisr_maize_production_mt_2026,metric tonnes,480.30735072510055,480.30735072510055,0.0,PASS
+Rulindo,2026,13,nisr_maize_production_mt_2026,metric tonnes,1296.3555343071732,1296.3555343071732,0.0,PASS
+Gakenke,2026,13,nisr_maize_production_mt_2026,metric tonnes,1623.6804135485702,1623.6804135485702,0.0,PASS
+Musanze,2026,13,nisr_maize_production_mt_2026,metric tonnes,3308.3527512958954,3308.3527512958954,0.0,PASS
+Burera,2026,13,nisr_maize_production_mt_2026,metric tonnes,3372.410931194555,3372.410931194555,0.0,PASS
+Gicumbi,2026,13,nisr_maize_production_mt_2026,metric tonnes,2493.805347663133,2493.805347663133,0.0,PASS
+Rwamagana,2026,13,nisr_maize_production_mt_2026,metric tonnes,3534.6426150213033,3534.6426150213033,0.0,PASS
+Nyagatare,2026,13,nisr_maize_production_mt_2026,metric tonnes,41183.96615051877,41183.96615051877,0.0,PASS
+Gatsibo,2026,13,nisr_maize_production_mt_2026,metric tonnes,11791.464173801736,11791.464173801736,0.0,PASS
+Kayonza,2026,13,nisr_maize_production_mt_2026,metric tonnes,8190.883459833663,8190.883459833663,0.0,PASS
+Kirehe,2026,13,nisr_maize_production_mt_2026,metric tonnes,4638.5407101991,4638.5407101991,0.0,PASS
+Ngoma,2026,13,nisr_maize_production_mt_2026,metric tonnes,1668.695983841818,1668.695983841818,0.0,PASS
+Bugesera,2026,13,nisr_maize_production_mt_2026,metric tonnes,6369.258570607954,6369.258570607954,0.0,PASS
+Nyarugenge,2026,13,nisr_bean_production_mt_2026,metric tonnes,1311.002106324051,1311.002106324051,0.0,PASS
+Gasabo,2026,13,nisr_bean_production_mt_2026,metric tonnes,2485.3120671135866,2485.3120671135866,0.0,PASS
+Kicukiro,2026,13,nisr_bean_production_mt_2026,metric tonnes,838.2522225322078,838.2522225322078,0.0,PASS
+Nyanza,2026,13,nisr_bean_production_mt_2026,metric tonnes,8854.190612043594,8854.190612043594,0.0,PASS
+Gisagara,2026,13,nisr_bean_production_mt_2026,metric tonnes,9406.440655753577,9406.440655753577,0.0,PASS
+Nyaruguru,2026,13,nisr_bean_production_mt_2026,metric tonnes,6567.357667838839,6567.357667838839,0.0,PASS
+Huye,2026,13,nisr_bean_production_mt_2026,metric tonnes,6333.501154701032,6333.501154701032,0.0,PASS
+Nyamagabe,2026,13,nisr_bean_production_mt_2026,metric tonnes,5516.9190849916995,5516.9190849916995,0.0,PASS
+Ruhango,2026,13,nisr_bean_production_mt_2026,metric tonnes,7165.700306644305,7165.700306644305,0.0,PASS
+Muhanga,2026,13,nisr_bean_production_mt_2026,metric tonnes,3993.7663383729323,3993.7663383729323,0.0,PASS
+Kamonyi,2026,13,nisr_bean_production_mt_2026,metric tonnes,6507.25231416822,6507.25231416822,0.0,PASS
+Karongi,2026,13,nisr_bean_production_mt_2026,metric tonnes,8593.054159896135,8593.054159896135,0.0,PASS
+Rutsiro,2026,13,nisr_bean_production_mt_2026,metric tonnes,4616.328888228245,4616.328888228245,0.0,PASS
+Rubavu,2026,13,nisr_bean_production_mt_2026,metric tonnes,4390.33616054243,4390.33616054243,0.0,PASS
+Nyabihu,2026,13,nisr_bean_production_mt_2026,metric tonnes,2870.4125176060334,2870.4125176060334,0.0,PASS
+Ngororero,2026,13,nisr_bean_production_mt_2026,metric tonnes,5192.397749051976,5192.397749051976,0.0,PASS
+Rusizi,2026,13,nisr_bean_production_mt_2026,metric tonnes,8283.898851358606,8283.898851358606,0.0,PASS
+Nyamasheke,2026,13,nisr_bean_production_mt_2026,metric tonnes,5799.973425996627,5799.973425996627,0.0,PASS
+Rulindo,2026,13,nisr_bean_production_mt_2026,metric tonnes,6330.637422028276,6330.637422028276,0.0,PASS
+Gakenke,2026,13,nisr_bean_production_mt_2026,metric tonnes,10407.57893264862,10407.57893264862,0.0,PASS
+Musanze,2026,13,nisr_bean_production_mt_2026,metric tonnes,7754.246675250639,7754.246675250639,0.0,PASS
+Burera,2026,13,nisr_bean_production_mt_2026,metric tonnes,12085.605380599967,12085.605380599967,0.0,PASS
+Gicumbi,2026,13,nisr_bean_production_mt_2026,metric tonnes,11799.956285028473,11799.956285028473,0.0,PASS
+Rwamagana,2026,13,nisr_bean_production_mt_2026,metric tonnes,6710.157722952778,6710.157722952778,0.0,PASS
+Nyagatare,2026,13,nisr_bean_production_mt_2026,metric tonnes,22840.637844774432,22840.637844774432,0.0,PASS
+Gatsibo,2026,13,nisr_bean_production_mt_2026,metric tonnes,12835.791888459462,12835.791888459462,0.0,PASS
+Kayonza,2026,13,nisr_bean_production_mt_2026,metric tonnes,10528.24965568457,10528.24965568457,0.0,PASS
+Kirehe,2026,13,nisr_bean_production_mt_2026,metric tonnes,16146.968213982334,16146.968213982334,0.0,PASS
+Ngoma,2026,13,nisr_bean_production_mt_2026,metric tonnes,13531.076143211154,13531.076143211154,0.0,PASS
+Bugesera,2026,13,nisr_bean_production_mt_2026,metric tonnes,14077.68591317364,14077.68591317364,0.0,PASS
